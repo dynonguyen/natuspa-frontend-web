@@ -1,0 +1,154 @@
+/* slide animation ============================== */
+.fadeOut {
+    animation: fadeOut ease-in .5s forwards;
+}
+
+@-webkit-keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+
+        opacity: 0;
+    }
+}
+
+.fadeIn {
+    animation: fadeIn ease-in .5s forwards;
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* slide text animation ======================== */
+.animated {
+    visibility: visible;
+    animation-duration: 2.5s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 2.5s;
+    -webkit-animation-fill-mode: both
+}
+
+/* fade in up */
+.fadeInUp {
+    opacity: 0;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0, 200px, 0)
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeInUp {
+    from {
+        transform: translate3d(0, 200px, 0)
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1
+    }
+}
+
+/* fade in down */
+.fadeInDown {
+    opacity: 0;
+    animation-name: fadeInDown;
+    -webkit-animation-name: fadeInDown;
+}
+
+@keyframes fadeInDown {
+    from {
+        transform: translate3d(0, -200px, 0)
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeInDown {
+    from {
+        transform: translate3d(0, -200px, 0)
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1
+    }
+}
+
+/* fade in left */
+.fadeInLeft {
+    opacity: 0;
+    animation-name: fadeInLeft;
+    -webkit-animation-name: fadeInLeft;
+}
+
+@keyframes fadeInLeft {
+    from {
+        transform: translate3d(-200px, 0, 0)
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeInLeft {
+    from {
+        transform: translate3d(-200px, 0, 0)
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1
+    }
+}
+
+/* fade in right */
+.fadeInRight {
+    opacity: 0;
+    animation-name: fadeInRight;
+    -webkit-animation-name: fadeInRight;
+}
+
+@keyframes fadeInRight {
+    from {
+        transform: translate3d(200px, 0, 0)
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeInRight {
+    from {
+        transform: translate3d(200px, 0, 0)
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1
+    }
+}

@@ -1,0 +1,206 @@
+@media only screen and (max-width: 1645px) {
+
+    /* ======================== Header ========================*/
+    .main-nav {
+        margin-right: 50px !important;
+    }
+
+    .menu-item {
+        padding: 0 25px;
+    }
+}
+
+@media only screen and (max-width: 1440px) {
+
+    /* ======================== Header ========================*/
+    header,
+    .slide-item img {
+        height: 760px;
+    }
+
+    .search-icon {
+        display: none;
+    }
+
+    .main-logo {
+        margin-left: 40px;
+        width: 18%;
+    }
+
+    .main-nav {
+        margin-right: 10px !important;
+    }
+
+    .nav-icon {
+        padding-right: 20px;
+    }
+}
+
+@media only screen and (max-width: 1201px) {
+
+    /* ======================== Header ========================*/
+    .main-nav-icon {
+        display: none;
+    }
+
+    nav {
+        padding-top: 8px !important;
+    }
+
+    .navbar {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .main-nav {
+        margin-right: 0 !important;
+    }
+
+    /* sub-menu */
+    .menu-item-has-child {
+        position: relative;
+    }
+
+    .sub-menu {
+        width: 102%;
+        position: absolute;
+        z-index: 10000;
+    }
+
+    .sub-menu li {
+        background-color: #332936 !important;
+        border-bottom: 1px solid #49484b !important;
+        padding: 20px 0 !important;
+    }
+
+    .menu-item:hover {
+        background-color: #332936 !important;
+        transition: all ease .35s;
+    }
+
+    /* slide text */
+    .slide-text {
+        margin-left: -390px;
+        margin-top: -140px;
+        max-width: 780px;
+    }
+
+    .slide-text h3 {
+        font-size: 28px;
+        letter-spacing: 1.2px;
+    }
+
+    .slide-text h1 {
+        font-size: 56px;
+    }
+
+    .slide-text p {
+        font-size: 16px;
+    }
+
+}
+
+@media only screen and (max-width: 1070px) {
+
+    /* ======================== Header ========================*/
+    .slide-control {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 840px) {
+
+    /* ======================== Header ========================*/
+    .slide-text {
+        margin-left: -320px;
+        margin-top: -140px;
+        max-width: 640px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    /* ======================== Header ========================*/
+    header,
+    .slide-item img {
+        height: 640px;
+    }
+
+    /* slides */
+    .slide-dot {
+        display: none;
+    }
+
+    /* slide text */
+    .slide-text {
+        max-width: 460px;
+        margin-left: -230px;
+        margin-top: -123.5px;
+    }
+
+    .slide-text h3 {
+        font-size: 22px;
+        letter-spacing: 1px;
+    }
+
+    .slide-text h1 {
+        font-size: 44px;
+    }
+
+    .slide-text p {
+        font-size: 13px;
+    }
+
+    .book-now-btn {
+        font-size: 14px !important;
+        padding: 8px 30px !important;
+        letter-spacing: .5px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+    /* ======================== Header ========================*/
+    .slide-text {
+        max-width: 360px;
+        margin-left: -180px;
+        margin-top: -120px;
+    }
+
+    .slide-text h3 {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .slide-text h1 {
+        font-size: 36px;
+        margin-bottom: 15px;
+    }
+
+    .slide-text p {
+        margin-bottom: 20px;
+    }
+
+    .book-now-btn {
+        font-size: 12px !important;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+
+    /* ======================== Header ========================*/
+    header {
+        height: 550px;
+    }
+
+    .slide-text {
+        max-width: 320px;
+        margin-left: -160px;
+        margin-top: -135px;
+    }
+
+    #main-nav-mobile ul li a,
+    .sub-menu li {
+        padding: 14px 0 !important;
+    }
+}
