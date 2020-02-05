@@ -1,0 +1,267 @@
+@font-face {
+  font-family: 'natuspa-icon';
+  src:  url('../webfonts/natuspa-icon.eot?oi2vdd');
+  src:  url('../webfonts/natuspa-icon.eot?oi2vdd#iefix') format('embedded-opentype'),
+    url('../webfonts/natuspa-icon.ttf?oi2vdd') format('truetype'),
+    url('../webfonts/natuspa-icon.woff?oi2vdd') format('woff'),
+    url('../webfonts/natuspa-icon.svg?oi2vdd#natuspa-icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="natuspa-icon-"], [class*=" natuspa-icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'natuspa-icon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.natuspa-icon-spa-4:before {
+  content: "\e900";
+}
+.natuspa-icon-treatment:before {
+  content: "\e901";
+}
+.natuspa-icon-shampoo:before {
+  content: "\e902";
+}
+.natuspa-icon-shower:before {
+  content: "\e903";
+}
+.natuspa-icon-massage-1:before {
+  content: "\e904";
+}
+.natuspa-icon-massage:before {
+  content: "\e905";
+}
+.natuspa-icon-candle:before {
+  content: "\e906";
+}
+.natuspa-icon-bamboo:before {
+  content: "\e907";
+}
+.natuspa-icon-incense:before {
+  content: "\e908";
+}
+.natuspa-icon-blossom:before {
+  content: "\e909";
+}
+.natuspa-icon-herbs:before {
+  content: "\e90a";
+}
+.natuspa-icon-mortar:before {
+  content: "\e90b";
+}
+.natuspa-icon-bath:before {
+  content: "\e90c";
+}
+.natuspa-icon-spa-3:before {
+  content: "\e90d";
+}
+.natuspa-icon-oil-1:before {
+  content: "\e90e";
+}
+.natuspa-icon-oil:before {
+  content: "\e90f";
+}
+.natuspa-icon-spa-2:before {
+  content: "\e910";
+}
+.natuspa-icon-teapot:before {
+  content: "\e911";
+}
+.natuspa-icon-honey:before {
+  content: "\e912";
+}
+.natuspa-icon-flower:before {
+  content: "\e913";
+}
+.natuspa-icon-spa-1:before {
+  content: "\e914";
+}
+.natuspa-icon-lotion:before {
+  content: "\e915";
+}
+.natuspa-icon-cream-1:before {
+  content: "\e916";
+}
+.natuspa-icon-cream:before {
+  content: "\e917";
+}
+.natuspa-icon-slippers:before {
+  content: "\e918";
+}
+.natuspa-icon-robe:before {
+  content: "\e919";
+}
+.natuspa-icon-spa:before {
+  content: "\e91a";
+}
+.natuspa-icon-perfume:before {
+  content: "\e91b";
+}
+.natuspa-icon-towel:before {
+  content: "\e91c";
+}
+.natuspa-icon-balm:before {
+  content: "\e91d";
+}
+.natuspa-icon-aloe-vera:before {
+  content: "\e91e";
+}
+.natuspa-icon-aromatherapy:before {
+  content: "\e91f";
+}
+.natuspa-icon-bamboo1:before {
+  content: "\e920";
+}
+.natuspa-icon-bathrope:before {
+  content: "\e921";
+}
+.natuspa-icon-bathtub:before {
+  content: "\e922";
+}
+.natuspa-icon-beverage:before {
+  content: "\e923";
+}
+.natuspa-icon-bonfire:before {
+  content: "\e924";
+}
+.natuspa-icon-bucket:before {
+  content: "\e925";
+}
+.natuspa-icon-candles:before {
+  content: "\e926";
+}
+.natuspa-icon-cream1:before {
+  content: "\e927";
+}
+.natuspa-icon-essential:before {
+  content: "\e928";
+}
+.natuspa-icon-face-mask:before {
+  content: "\e929";
+}
+.natuspa-icon-foot:before {
+  content: "\e92a";
+}
+.natuspa-icon-heater:before {
+  content: "\e92b";
+}
+.natuspa-icon-herbal:before {
+  content: "\e92c";
+}
+.natuspa-icon-honey1:before {
+  content: "\e92d";
+}
+.natuspa-icon-incense1:before {
+  content: "\e92e";
+}
+.natuspa-icon-lemon:before {
+  content: "\e92f";
+}
+.natuspa-icon-lotus-flower:before {
+  content: "\e930";
+}
+.natuspa-icon-massage1:before {
+  content: "\e931";
+}
+.natuspa-icon-oil1:before {
+  content: "\e932";
+}
+.natuspa-icon-sauna:before {
+  content: "\e933";
+}
+.natuspa-icon-scent:before {
+  content: "\e934";
+}
+.natuspa-icon-scoop:before {
+  content: "\e935";
+}
+.natuspa-icon-shampoo1:before {
+  content: "\e936";
+}
+.natuspa-icon-shower1:before {
+  content: "\e937";
+}
+.natuspa-icon-slippers1:before {
+  content: "\e938";
+}
+.natuspa-icon-spa1:before {
+  content: "\e939";
+}
+.natuspa-icon-candle1:before {
+  content: "\e93a";
+}
+.natuspa-icon-sponges:before {
+  content: "\e93b";
+}
+.natuspa-icon-stones:before {
+  content: "\e93c";
+}
+.natuspa-icon-tea-bag:before {
+  content: "\e93d";
+}
+.natuspa-icon-tea-pot:before {
+  content: "\e93e";
+}
+.natuspa-icon-thermometer:before {
+  content: "\e93f";
+}
+.natuspa-icon-tissue:before {
+  content: "\e940";
+}
+.natuspa-icon-towel1:before {
+  content: "\e941";
+}
+.natuspa-icon-nail:before {
+  content: "\e942";
+}
+.natuspa-icon-polish:before {
+  content: "\e943";
+}
+.natuspa-icon-stone:before {
+  content: "\e944";
+}
+.natuspa-icon-spa-31:before {
+  content: "\e945";
+}
+.natuspa-icon-spa-21:before {
+  content: "\e946";
+}
+.natuspa-icon-spa-11:before {
+  content: "\e947";
+}
+.natuspa-icon-depilation:before {
+  content: "\e948";
+}
+.natuspa-icon-spa2:before {
+  content: "\e949";
+}
+.natuspa-icon-facial-treatment:before {
+  content: "\e94a";
+}
+.natuspa-icon-hot-stone:before {
+  content: "\e94b";
+}
+.natuspa-icon-nail-1:before {
+  content: "\e94c";
+}
+.natuspa-icon-cramp:before {
+  content: "\e94d";
+}
+.natuspa-icon-doctor:before {
+  content: "\e94e";
+}
+.natuspa-icon-quality:before {
+  content: "\e94f";
+}

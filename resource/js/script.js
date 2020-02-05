@@ -6,14 +6,14 @@ $(window).on('load', function () {
 
 $(document).ready(function () {
     // ================= Way point - nav sticky ================
-    $('.about-us').waypoint(function (dicrection) {
+    $('.services-section').waypoint(function (dicrection) {
         if (dicrection === 'down') {
             $('nav').addClass('nav-sticky');
         } else {
             $('nav').removeClass('nav-sticky');
         }
     }, {
-        offset: '100px'
+        offset: '0px'
     });
 
     // ===================== search button =====================
@@ -227,7 +227,7 @@ $(document).ready(function () {
                 toNextSlide();
             else
                 toPrevSlide();
-        }, 5000);
+        }, 7000);
         windows.resize(function () {
             if (windows.width() >= 768)
                 clearInterval(idInterval);
@@ -255,11 +255,13 @@ $(document).ready(function () {
                 nextSlide = $(this);
         });
 
+        removeAnimatedForSlideText();
         activeSlide.addClass('fadeOut').one('webkitAnimationEnd', function () {
             $('.fadeOut').removeClass('fadeOut').removeClass('active');
         });
 
         nextSlide.addClass('fadeIn active').one('webkitAnimationEnd', function () {
+            addAnimatedForSlideText();
             $('.fadeIn').removeClass('fadeIn');
             addIndexForPrevSlide();
             addIndexForNextSlide();

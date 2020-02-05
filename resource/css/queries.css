@@ -156,6 +156,15 @@
         padding: 8px 30px !important;
         letter-spacing: .5px;
     }
+    /* services section ==================== */
+    .service .spacer-clearfix{
+        height: 50px !important;
+    }
+
+    .services-section .spacer-clearfix:last-child{
+        height: 30px !important;
+    }
+   
 }
 
 @media only screen and (max-width: 480px) {

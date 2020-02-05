@@ -76,6 +76,29 @@ img {
     vertical-align: middle;
 }
 
+.spacer-clearfix{
+    width: 100%;
+}
+
+.section-title{
+    font-family: Playfair Display;
+    text-transform: capitalize;
+    font-size: 36px;
+    letter-spacing: .6px;
+    margin-bottom: 15px;
+    position: relative;
+    text-align: center;
+}
+
+.section-title::after{
+    content: " ";
+    width: 50px;
+    height: 2px;
+    background-color: #f96882 !important;
+    display: block;
+    margin: 0 auto;
+    margin-top: 15px;
+}
 /* ============================================ !! ============================================ */
 /* ============== Header ================= */
 header {
@@ -174,7 +197,7 @@ nav.nav-sticky{
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #241d26;
+    background-color: rgba(36, 29, 38, .98);
     padding-top: 0 !important;
     padding-bottom: 0;
     transition: all ease .35s;
@@ -636,3 +659,55 @@ nav.nav-sticky{
     outline: none !important;
 }
 /* ============================================ !! ============================================ */
+/* ============================================ Services section ============================== */
+.services-info{
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.services-main-text{
+    max-width: 570px;
+    margin-top: 35px !important;
+    margin: 0 auto;
+    line-height: 30px;
+    font-size: 18px;
+    color: #4F4D50;
+}
+
+.service{
+    text-align: center;
+}
+
+.services-icon-wrap{
+    color: #f96882;
+    font-size: 500%;
+    transition: all ease .5s;
+}
+
+
+.services-icon-wrap:hover{
+    transform: translate3d(-5px, -5px, 0) scale(1.1); 
+}
+
+.service .heading{
+    font-family: Playfair Display;
+    margin: 18px 0 15px;
+    font-size: 22px;
+    letter-spacing: .7px;
+    background-image: linear-gradient(90deg, #f96882, #f96882 50%, #241d26 0);
+    background-size: 200% 100%;
+    background-position: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all ease .8s;
+}
+
+.service .heading:hover{
+    background-position: 0;
+}
+
+.service .description{
+    color: #7C787D;
+    font-size: 16px;
+    line-height: 26px;
+}
