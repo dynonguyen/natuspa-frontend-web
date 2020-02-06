@@ -227,7 +227,7 @@ $(document).ready(function () {
                 toNextSlide();
             else
                 toPrevSlide();
-        }, 7000);
+        }, 6000);
         windows.resize(function () {
             if (windows.width() >= 768)
                 clearInterval(idInterval);

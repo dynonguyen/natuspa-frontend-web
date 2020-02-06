@@ -108,6 +108,17 @@
     }
 }
 
+@media only screen and (max-width: 992px){
+    /* about section ===================== */
+    .video-box{
+        height: 540px !important;
+    }
+
+    .about-main-text{
+        padding: 40px 15% 50px 30px !important;
+    }
+}
+
 @media only screen and (max-width: 840px) {
 
     /* ======================== Header ========================*/
@@ -164,7 +175,11 @@
     .services-section .spacer-clearfix:last-child{
         height: 30px !important;
     }
-   
+
+    /* about section ===================== */
+    .video-box{
+        height: 420px !important;
+    }
 }
 
 @media only screen and (max-width: 480px) {
