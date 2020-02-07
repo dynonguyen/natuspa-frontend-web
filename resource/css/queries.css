@@ -208,6 +208,31 @@
     .book-now-btn {
         font-size: 12px !important;
     }
+
+    /* ======================== Testimonial section ======================== */
+    .slick-slide-cite p{
+        font-size: 18px;
+        line-height: 30px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .slick-center img{
+        width: 80px !important;
+        transform: translate3d(84%, 0, 0) !important;
+    }
+
+    .slick-slide-figure-info .infomation{
+        transform: translateX(0px);
+    }
+    
+    .slick-slide-figure-info .name{
+        font-size: 18px;
+    }
+
+    .slick-slide-figure-info .position{
+        font-size: 14px;
+    }
 }
 
 @media only screen and (max-width: 375px) {
@@ -226,5 +251,11 @@
     #main-nav-mobile ul li a,
     .sub-menu li {
         padding: 14px 0 !important;
+    }
+
+    /* ======================== Testimonial section ======================== */
+    .slick-center img{
+        width: 80px !important;
+        transform: translate3d(70%, 0, 0) !important;
     }
 }

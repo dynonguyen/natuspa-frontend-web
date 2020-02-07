@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./vendor/css/bootstrap.min.css">
     <link rel="stylesheet" href="./vendor/fonts/fontawesome-5.0.13/css/all.css">
     <link rel="stylesheet" href="./vendor/fonts/natuspa-font/css/natuspa-icons.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 </head>
 
 <body class="preload">
@@ -22,6 +23,9 @@
             <img src="./imgs/loader.svg" alt="Loader" class="loader-img">
         </div>
     </div>
+
+    <!-- scroll top -->
+    <a class="scroll-top link-text" href="#home">Top</a>
 
     <!-- Header -->
     <header id="home">
@@ -39,7 +43,7 @@
             <div class="collapse navbar-collapse main-nav">
                 <ul class="navbar-nav menu" id="mainNav">
                     <li class="nav-item menu-item menu-item-current menu-item-has-child">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="#home">Home</a>
                         <ul class="sub-menu">
                             <li>
                                 <a href="index.html">Home One</a>
@@ -50,7 +54,7 @@
                         </ul>
                     </li>
                     <li class="nav-item menu-item">
-                        <a class="nav-link" href="#">Services</a>
+                        <a class="nav-link" href="#services">Services</a>
                     </li>
                     <li class="nav-item menu-item">
                         <a class="nav-link" href="#">Contact</a>
@@ -66,7 +70,7 @@
                         <a class="nav-link" href="#">Pricing</a>
                     </li>
                     <li class="nav-item menu-item">
-                        <a class="nav-link" href="#">About Us</a>
+                        <a class="nav-link" href="#about">About Us</a>
                     </li>
                     <li class="nav-item menu-item menu-item-has-child">
                         <a class="nav-link" href="#">Pages</a>
@@ -216,7 +220,7 @@
         </div>
     </header>
 
-    <div class="services-section container">
+    <div class="services-section container" id="services">
         <div class="row">
             <div class="spacer-clearfix" style="height: 80px;"></div>
             <div class="services-info col-md-12">
@@ -289,7 +293,7 @@
         </div>
     </div>
 
-    <div class="about-section container-fluid">
+    <div class="about-section container-fluid" id="about">
         <div class="row">
             <div class="video-box col-lg-6 col-md-12">
                 <a href="https://www.youtube.com/watch?v=tKkJnauWFgA&feature=emb_title" class="play-btn"
@@ -313,7 +317,81 @@
                 <a class="link-text text-linear-effect">Read More</a>
             </div>
         </div>
-        <div class="spacer-clearfic" style="height: 80px;"></div>
+        <div class="spacer-clearfix" style="height: 80px;"></div>
+    </div>
+
+    <div class="testimonial-section container" id="testimonial">
+        <div class="section-title">Our Client Say</div>
+        <div class="spacer-clearfix" style="height: 35px;"></div>
+        <blockquote>
+            <div class="slick-slide-cite">
+                <p>
+                    I’ve been coming here for over 10 years and the service is on point. The staff is very
+                    professional and know what they’re doing. If you want to go somewhere that is actually relaxing,
+                    come
+                    here!
+                </p>
+                <p>
+                    I’ve been coming here for over 10 years and the service is on point. The staff is very
+                    professional and know what they’re doing. If you want to go somewhere that is actually relaxing,
+                    come
+                    here!
+                </p>
+                <p>
+                    I’ve been coming here for over 10 years and the service is on point. The staff is very
+                    professional and know what they’re doing. If you want to go somewhere that is actually relaxing,
+                    come
+                    here!
+                </p>
+                <p>
+                    I’ve been coming here for over 10 years and the service is on point. The staff is very
+                    professional and know what they’re doing. If you want to go somewhere that is actually relaxing,
+                    come
+                    here!
+                </p>
+                <p>
+                    I’ve been coming here for over 10 years and the service is on point. The staff is very
+                    professional and know what they’re doing. If you want to go somewhere that is actually relaxing,
+                    come
+                    here!
+                </p>
+            </div>
+            <div class="slick-slide-figure-img">
+                <div><img src="./imgs/testimonials/1.png" alt="customer"></div>
+                <div><img src="./imgs/testimonials/2.png" alt="customer"></div>
+                <div><img src="./imgs/testimonials/3.png" alt="customer"></div>
+                <div><img src="./imgs/testimonials/1.png" alt="customer"></div>
+                <div><img src="./imgs/testimonials/5.png" alt="customer"></div>
+                <div><img src="./imgs/testimonials/4.png" alt="customer"></div>
+            </div>
+            <div class="slick-slide-figure-info">
+                <div class="infomation">
+                    <div class="name">jessica Speckert</div>
+                    <div class="position">Customer</div>
+                </div>
+                <div class="infomation">
+                    <div class="name">Maria Green</div>
+                    <div class="position">Customer</div>
+                </div>
+                <div class="infomation">
+                    <div class="name">Fiona Speckert</div>
+                    <div class="position">Customer</div>
+                </div>
+                <div class="infomation">
+                    <div class="name">jessica Speckert</div>
+                    <div class="position">Customer</div>
+                </div>
+                <div class="infomation">
+                    <div class="name">Michelle Martin</div>
+                    <div class="position">Customer</div>
+                </div>
+                <div class="infomation">
+                    <div class="name">Margie Edwards</div>
+                    <div class="position">Customer</div>
+                </div>
+            </div>
+        </blockquote>
+        <div class="spacer-clearfix" style="height: 80px;"></div>
     </div>
 
     <script src="./vendor/js/jquery-v3.4.1.min.js"></script>
@@ -321,6 +399,7 @@
     <script src="./vendor/js/jquery.waypoints.min.js"></script>
     <script src="./resource/js/script.js"></script>
     <script src="https://kit.fontawesome.com/7534282567.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 </body>
 

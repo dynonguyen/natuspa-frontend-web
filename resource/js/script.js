@@ -5,12 +5,20 @@ $(window).on('load', function () {
 });
 
 $(document).ready(function () {
-    // ================= Way point - nav sticky ================
+    // ================= Way point - nav sticky and scroll-top ================
     $('.services-section').waypoint(function (dicrection) {
         if (dicrection === 'down') {
             $('nav').addClass('nav-sticky');
+            $('.scroll-top').css({
+                'visibility': 'visible',
+                'opacity': '1'
+            });
         } else {
             $('nav').removeClass('nav-sticky');
+            $('.scroll-top').css({
+                'visibility': 'hidden',
+                'opacity': '0'
+            });
         }
     }, {
         offset: '0px'
@@ -267,4 +275,57 @@ $(document).ready(function () {
             addIndexForNextSlide();
         });
     });
+
+    // ======================== Scroll Top ==============================
+    $('a').on('click', function (event) {
+        $('html, body').animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+        }, 1000);
+        event.preventDefault();
+    });
+
+    // ============================ Slick ================================
+    $('.slick-slide-cite').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        asNavFor: '.slick-slide-figure-img, .slick-slide-figure-info',
+        focusOnSelect: true,
+        autoplay: true,
+        autoplaySpeed: 1500
+    });
+
+    $('.slick-slide-figure-img').slick({
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        arrows: false,
+        centerMode: true,
+        centerPadding: 0,
+        asNavFor: '.slick-slide-cite, .slick-slide-figure-info',
+        focusOnSelect: true,
+        infinite: true,
+        responsive: [
+            {
+                breakpoint: 769,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                }
+            },{
+                breakpoint: 481,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+
+    $('.slick-slide-figure-info').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        asNavFor: '.slick-slide-cite, .slick-slide-figure-img',
+        focusOnSelect: true
+    });
+
 });

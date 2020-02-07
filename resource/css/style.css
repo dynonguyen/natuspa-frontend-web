@@ -60,6 +60,17 @@ body {
     margin: -4rem 0 0 -4rem;
 }
 
+/* ============== scroll top ============= */
+.scroll-top.link-text{
+    color: #f96882;
+    position: fixed;
+    bottom: 150px;
+    right: 30px;
+    transform: rotate(-90deg);
+    z-index: 100000000000000;
+    visibility: hidden;
+    opacity: 0;
+}
 /* ============================================ !! ============================================ */
 /* ============== Reusable =============== */
 li {
@@ -807,4 +818,68 @@ nav.nav-sticky {
     left: -40px;
     top: 50%;
     background-color: #f96882;
+}
+
+/* ======================== Testimonial section ============================ */
+.slick-slide{
+    outline: none;
+}
+
+.slick-center img{
+    opacity: 1 !important;
+    width: 80px !important;
+    transform: translate3d(-10px, -20px, 0);
+}
+
+.slick-slide-cite p{
+    font-family: "Lora", sans-serif;
+    font-size: 22px;
+    line-height: 40px;
+    color: #4f4d50;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+
+.slick-slide-cite{
+    max-width: 725px;
+    margin: 0 auto;
+}
+
+.slick-slide-figure-img{
+    width: 55%;
+    margin: 0 auto;
+    transition: all ease .8s;
+    margin-bottom: 25px;
+}
+
+.slick-slide-figure-img img{
+    width: 60px;
+    padding: 20px 0;
+    opacity: .8;
+}
+
+.slick-slide-figure-info{
+    text-transform: capitalize;
+    width: 55%;
+    margin: 0 auto;
+}
+
+.slick-slide-figure-info .infomation{
+    text-align: center;
+    transform: translateX(-25px);
+}
+
+.slick-slide-figure-info .name{
+    font-family: "Playfair Display", sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    color: #241d26;
+    letter-spacing: .4px;
+    margin-bottom: 15px;
+}
+
+.slick-slide-figure-info .position{
+    color: #f96882;
 }
