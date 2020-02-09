@@ -3,6 +3,17 @@
     animation: fadeOut ease-in .5s forwards;
 }
 
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+
+        opacity: 0;
+    }
+}
+
 @-webkit-keyframes fadeOut {
     from {
         opacity: 1;
@@ -16,6 +27,16 @@
 
 .fadeIn {
     animation: fadeIn ease-in .5s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 @-webkit-keyframes fadeIn {
@@ -155,48 +176,122 @@
 
 /* play btn animation ======================== */
 .play-btn::after,
-.play-btn::before{
+.play-btn::before {
     animation: playBtnAnimate 1.5s linear infinite;
     -webkit-animation: playBtnAnimate 1.5s linear infinite;
     opacity: 0;
 }
 
-.play-btn::after{
+.play-btn::after {
     animation-delay: .5s;
 }
 
-@keyframes playBtnAnimate{
-    0%{
+@keyframes playBtnAnimate {
+    0% {
         transform: scale(.5);
-    }50%{
+    }
+
+    50% {
         opacity: 1;
-    }100%{
+    }
+
+    100% {
         transform: scale(1.5);
     }
 }
 
-@-webkit-keyframes playBtnAnimate{
-    0%{
+@-webkit-keyframes playBtnAnimate {
+    0% {
         transform: scale(.5);
-    }50%{
+    }
+
+    50% {
         opacity: 1;
-    }100%{
+    }
+
+    100% {
         transform: scale(1.5);
     }
 }
 
 /* read more before effect */
-.link-text:hover::before{
+.link-text:hover::before {
     animation: animated .6s forwards;
     animation-delay: .3s;
     width: 0;
 }
 
-@-webkit-keyframes animated{
-    form{
+@keyframes animated {
+    form {
         width: 0;
-    }to{
+    }
+
+    to {
         width: 30px;
         background-color: #241d26;
+    }
+}
+
+@-webkit-keyframes animated {
+    form {
+        width: 0;
+    }
+
+    to {
+        width: 30px;
+        background-color: #241d26;
+    }
+}
+
+/* shake effect  */
+.apply-shake {
+    animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
+}
+
+@keyframes shake {
+
+    10%,
+    90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%,
+    80% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+
+    40%,
+    60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
+
+@-webkit-keyframes shake {
+
+    10%,
+    90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%,
+    80% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+
+    40%,
+    60% {
+        transform: translate3d(4px, 0, 0);
     }
 }

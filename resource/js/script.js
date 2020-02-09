@@ -24,7 +24,7 @@ $(document).ready(function () {
         offset: '0px'
     });
 
-    // ===================== search button =====================
+    // =========================== search button ==============================
     // open
     $('.search-button').on('click', function () {
         $('.search-form').css({
@@ -40,7 +40,7 @@ $(document).ready(function () {
         });
     });
 
-    // ===================== shop cart button =====================
+    // ============================ shop cart button =========================
     // open
     $('.bag-button').on('mouseenter', function () {
         $('.shop-cart').css({
@@ -62,7 +62,7 @@ $(document).ready(function () {
         });
     });
 
-    // ===================== menu popup slide =====================
+    // ======================== menu popup slide ============================
     $('.slide-icon').on('click', function () {
         $('.menu-popup').css('width', '450px');
     });
@@ -70,7 +70,7 @@ $(document).ready(function () {
         $('.menu-popup').css('width', '0');
     });
 
-    // ==================== mobile navigation icon ====================
+    // ======================= mobile navigation icon =======================
     let windows = $(window);
     if (windows.width() < 1200) {
         $('.main-nav').attr('id', 'main-nav-mobile');
@@ -84,7 +84,7 @@ $(document).ready(function () {
         }
     });
 
-    // =================== dropdown navigation ========================
+    // ====================== dropdown navigation ============================
     var addDropdownIcon = function () {
         $('.menu-item-has-child').each(function () {
             let currentItem = $(this).find('.nav-link');
@@ -103,7 +103,7 @@ $(document).ready(function () {
         }
     });
 
-    // ==================== slide header ==============================
+    // ======================= slide header ==================================
     //add id for slide and slide-dot
     $('.slide-item').each(function (index) {
         $(this).attr('id', index + 1);
@@ -276,7 +276,7 @@ $(document).ready(function () {
         });
     });
 
-    // ======================== Scroll Top ==============================
+    // ============================== Scroll Top =================================
     $('a').on('click', function (event) {
         $('html, body').animate({
             scrollTop: $($.attr(this, 'href')).offset().top
@@ -284,7 +284,7 @@ $(document).ready(function () {
         event.preventDefault();
     });
 
-    // ============================ Slick ================================
+    // =============================== Slick =====================================
     $('.slick-slide-cite').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -311,7 +311,7 @@ $(document).ready(function () {
                     slidesToShow: 3,
                     slidesToScroll: 1
                 }
-            },{
+            }, {
                 breakpoint: 481,
                 settings: {
                     slidesToShow: 1
@@ -328,4 +328,131 @@ $(document).ready(function () {
         focusOnSelect: true
     });
 
+    // ============================ Date Picker =================================
+    $('#datepicker').datetimepicker();
+
+    var resizeDatepickder = function () {
+        let inputWidth = $('#datepicker').outerWidth();
+        let calendarWidth = $('.xdsoft_datepicker').outerWidth(true);
+        let timeWidth = $('.xdsoft_timepicker').outerWidth(true);
+        if (inputWidth < 310) {
+            inputWidth = 310;
+        }
+        windows.resize(function () {
+            inputWidth = $('#datepicker').outerWidth();
+            calendarWidth = $('.xdsoft_datepicker').outerWidth(true);
+            timeWidth = $('.xdsoft_timepicker').outerWidth(true);
+        });
+        let margin = (inputWidth - calendarWidth - timeWidth) / 2;
+        let widthToString = 'width: ' + inputWidth.toString() + 'px !important';
+        let marginToString = 'margin-left: ' + margin.toString() + 'px !important';
+        $('.xdsoft_datetimepicker').css('cssText', widthToString);
+        $('.xdsoft_datepicker').css('cssText', marginToString);
+    }
+
+    resizeDatepickder();
+    windows.resize(function () {
+        resizeDatepickder();
+    });
+
+    // ========================= Form Input - Service ==========================
+    // dropdown
+    let dropdownIcon = $('.dropdown-icon i');
+
+    var flipUp = function () {
+        $('.option-menu').animate({
+            'opacity': '0',
+            'height': '0'
+        }, 500);
+        dropdownIcon.removeClass('rotate').addClass('down');
+    }
+    var flipDown = function () {
+        $('.option-menu').animate({
+            'opacity': '1',
+            'height': '156px'
+        }, 500);
+        dropdownIcon.removeClass('down').addClass('rotate');
+    }
+
+    dropdownIcon.on('click', function () {
+        if (dropdownIcon.hasClass('down') === true) {
+            flipDown();
+        } else {
+            flipUp();
+        }
+    });
+
+    // select services
+    let option = $('.option-menu .option');
+    option.on('click', function () {
+        $('.current-option').text($(this).text());
+        $('.current-option').attr('data-value', $(this).attr('data-value'));
+        if($('.current-option').attr('data-value') != '0')
+            $('.current-option').css('color', '#000');  
+        else
+        $('.current-option').css('color', '#888');  
+        flipUp();
+    });
+
+    // Form Validation
+    let input = $('.form-input input');
+
+    var isEmpty = function (item) {
+        if (!item)
+            return true;
+        return false;
+    }
+    var isEmail = function (email) {
+        let regex = /^([a-zA-Z0-9_])+\@(([a-zA-Z]{3,})+\.com)$/i;
+        return regex.test(email);
+    }
+    var isPhoneNumber = function(phoneNumber){
+        let regex = /^\d{10,11}$/
+        return regex.test(phoneNumber);
+    }
+    var checkTypeOfServices = function(tOS){
+        if(tOS.attr('data-value') == '0')
+            return false;
+        return true;
+    }
+
+    var onError = function (selector) {
+        selector.next().css('display', 'block');
+        selector.addClass('apply-shake').one('webkitAnimationEnd', function () {
+            selector.removeClass('apply-shake')
+        });
+    }
+    var onNoError = function (selector) {
+        selector.next().css('display', 'none');
+        selector.removeClass('apply-shake');
+    }
+
+    var validateForm = function () {
+        // check empty
+        input.each(function () {
+            if (isEmpty($(this).val()))
+                onError($(this));
+            else 
+                onNoError($(this));
+        });
+        // check email
+        if(isEmail($('#email').val()))
+            onNoError($('#email'));
+        else
+            onError($('#email'));
+        // check phone number
+        if(isPhoneNumber($('#phone-number').val()))
+            onNoError($('#phone-number'));
+        else
+            onError($('#phone-number'));
+        // check type of services
+        if(checkTypeOfServices($('.current-option')))
+            onNoError($('.current-option'));
+        else
+            onError($('.current-option'));
+    }
+
+    $('.submit-btn').click(function () {
+        validateForm();
+    });
 });

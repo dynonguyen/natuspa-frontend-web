@@ -114,6 +114,22 @@
         height: 540px !important;
     }
 
+    /* appointment-section ============== */
+    .appointment-section .pre-heading{
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .appointment-section .main-heading{
+        font-size: 48px;
+        line-height: 45px;
+        margin-bottom: 10px;
+    }
+
+    .appointment-section .pre-heading{
+        font-size: 16px;
+    }
+
     .about-main-text{
         padding: 40px 15% 50px 30px !important;
     }
@@ -129,7 +145,7 @@
     }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
 
     /* ======================== Header ========================*/
     header,
@@ -179,6 +195,19 @@
     /* about section ===================== */
     .video-box{
         height: 420px !important;
+    }
+
+    /* appointment section */
+    .submit-btn{
+        margin-top: 30px;
+    }
+
+    .submit-btn .book-now-btn{
+        font-size: 16px !important;
+    }
+
+    .form-input input:not(#datepicker):not(#appointment-submit):focus{
+        transform: scale(1.05);
     }
 }
 
@@ -256,6 +285,6 @@
     /* ======================== Testimonial section ======================== */
     .slick-center img{
         width: 80px !important;
-        transform: translate3d(70%, 0, 0) !important;
+        transform: translate3d(65%, 0, 0) !important;
     }
 }

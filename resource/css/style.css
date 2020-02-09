@@ -61,7 +61,7 @@ body {
 }
 
 /* ============== scroll top ============= */
-.scroll-top.link-text{
+.scroll-top.link-text {
     color: #f96882;
     position: fixed;
     bottom: 150px;
@@ -71,6 +71,7 @@ body {
     visibility: hidden;
     opacity: 0;
 }
+
 /* ============================================ !! ============================================ */
 /* ============== Reusable =============== */
 li {
@@ -111,7 +112,7 @@ img {
     margin-top: 15px;
 }
 
-.text-linear-effect{
+.text-linear-effect {
     background-image: linear-gradient(90deg, #f96882, #f96882 50%, #241d26 0);
     background-size: 200% 100%;
     background-position: 100%;
@@ -120,9 +121,10 @@ img {
     transition: all ease 1s;
 }
 
-.text-linear-effect:hover{
+.text-linear-effect:hover {
     background-position: 0;
 }
+
 /* ============================================ !! ============================================ */
 /* ============== Header ================= */
 header {
@@ -741,7 +743,7 @@ nav.nav-sticky {
 }
 
 .play-btn,
-.play-btn:hover{
+.play-btn:hover {
     background-color: #fff;
     width: 90px;
     height: 90px;
@@ -759,7 +761,7 @@ nav.nav-sticky {
 }
 
 .play-btn::after,
-.play-btn::before{
+.play-btn::before {
     content: "";
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 50%;
@@ -770,18 +772,18 @@ nav.nav-sticky {
     right: -30px;
 }
 
-.about-main-text{
+.about-main-text {
     padding: 80px 15% 90px 60px !important;
     background-color: #f1f1f1;
 }
 
 .about-main-text h2,
-.about-main-text h2::after{
+.about-main-text h2::after {
     text-align: left;
     margin-left: 0;
 }
 
-.about-main-text .sub-heading{
+.about-main-text .sub-heading {
     font-family: "Playfair Display", sans-serif;
     font-size: 18px;
     line-height: 32px;
@@ -790,14 +792,14 @@ nav.nav-sticky {
     letter-spacing: .4px;
 }
 
-.about-main-text p{
+.about-main-text p {
     color: #999;
     letter-spacing: .3px;
     font-size: 18px;
     margin-bottom: 30px;
 }
 
-.link-text{
+.link-text {
     text-transform: uppercase;
     font-family: Playfair Display;
     font-weight: 700;
@@ -806,11 +808,11 @@ nav.nav-sticky {
     margin-left: 40px;
 }
 
-.link-text.text-linear-effect{
+.link-text.text-linear-effect {
     background-image: linear-gradient(90deg, #241d26, #241d26 50%, #f96882 0);
 }
 
-.link-text::before{
+.link-text::before {
     content: "";
     width: 30px;
     height: 1px;
@@ -820,18 +822,19 @@ nav.nav-sticky {
     background-color: #f96882;
 }
 
+/* ============================================ !! ============================================ */
 /* ======================== Testimonial section ============================ */
-.slick-slide{
+.slick-slide {
     outline: none;
 }
 
-.slick-center img{
+.slick-center img {
     opacity: 1 !important;
     width: 80px !important;
     transform: translate3d(-10px, -20px, 0);
 }
 
-.slick-slide-cite p{
+.slick-slide-cite p {
     font-family: "Lora", sans-serif;
     font-size: 22px;
     line-height: 40px;
@@ -842,36 +845,36 @@ nav.nav-sticky {
     padding-bottom: 40px;
 }
 
-.slick-slide-cite{
+.slick-slide-cite {
     max-width: 725px;
     margin: 0 auto;
 }
 
-.slick-slide-figure-img{
+.slick-slide-figure-img {
     width: 55%;
     margin: 0 auto;
     transition: all ease .8s;
     margin-bottom: 25px;
 }
 
-.slick-slide-figure-img img{
+.slick-slide-figure-img img {
     width: 60px;
     padding: 20px 0;
     opacity: .8;
 }
 
-.slick-slide-figure-info{
+.slick-slide-figure-info {
     text-transform: capitalize;
     width: 55%;
     margin: 0 auto;
 }
 
-.slick-slide-figure-info .infomation{
+.slick-slide-figure-info .infomation {
     text-align: center;
     transform: translateX(-25px);
 }
 
-.slick-slide-figure-info .name{
+.slick-slide-figure-info .name {
     font-family: "Playfair Display", sans-serif;
     font-size: 22px;
     font-weight: 500;
@@ -880,6 +883,131 @@ nav.nav-sticky {
     margin-bottom: 15px;
 }
 
-.slick-slide-figure-info .position{
+.slick-slide-figure-info .position {
     color: #f96882;
+}
+
+/* ============================================ !! ============================================ */
+/* ======================== Appointment section ============================ */
+.appointment-section {
+    background-image: url('/imgs/appointment-bg.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+
+.appointment-section .heading {
+    font-family: "Playfair Display", sans-serif;
+    color: #fff;
+    text-align: center;
+}
+
+.appointment-section .pre-heading {
+    font-size: 20px;
+    font-style: italic;
+    letter-spacing: .7px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.appointment-section .main-heading {
+    text-transform: uppercase;
+    font-size: 80px;
+    line-height: 70px;
+    margin-bottom: 20px;
+}
+
+.appointment-section .sub-heading {
+    font-size: 32px;
+    letter-spacing: .8px;
+}
+
+/* form ========== */
+.appointment-section .container {
+    max-width: 1200px !important;
+}
+
+.form-input input,
+.your-service .current-option{
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    border: none;
+    margin-bottom: 30px;
+    padding: 14px 20px !important;
+    background-color: #fff;
+    box-shadow: 0 0 3px 3px rgba(54, 54, 54, 0.1);
+}
+
+.your-service .current-option,
+input::placeholder{
+   color: #888;
+   margin-bottom: 0 !important;
+}
+
+.form-input input:not(#datepicker):not(#appointment-submit):focus{
+    transform: scale(1.1);
+    transition: all ease .35s;
+}
+
+.your-service .current-option{
+    border-bottom: 1px solid #ddd;
+}
+
+.your-service{
+    position: relative;
+}
+
+.your-service .dropdown-icon{
+    font-size: 16px;
+    position: absolute;
+    top: 14px;
+    right: 36px;
+    color: #333 !important;
+    transition: all ease .5s;
+}
+
+.option-menu{
+    overflow-y: scroll;
+    opacity: 0;
+    height: 0;
+    margin: 0 !important;
+}
+
+.dropdown-icon i{
+    transition: all ease .5s;
+}
+
+.dropdown-icon i.rotate{
+    transform: rotate(-540deg);
+}
+
+.option-menu li{
+    width: 100%;
+    background-color: #fff;
+    padding: 14px 20px;
+    color: #888;
+    transition: all ease .35s;
+}
+
+.option-menu li:hover{
+    background-color: #f96882;
+    color: #fff;
+}
+
+.error{
+    position: absolute;
+    color: red;
+    top: 12px;
+    right: 44px;
+    font-weight: 500;
+    display: none;
+}
+
+.error span{
+    position: relative;
+    top: 3px;
+}
+
+.your-service .error{
+    right: 60px;
 }
