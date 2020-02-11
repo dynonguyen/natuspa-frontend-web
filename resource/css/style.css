@@ -1011,3 +1011,116 @@ input::placeholder{
 .your-service .error{
     right: 60px;
 }
+
+/* ============================================ !! ============================================ */
+/* ======================== Pricing plan ============================ */
+.pricing-plan .sub-heading{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    color: #4F4D50;
+    letter-spacing: .5px;
+    max-width: 570px;
+    margin: 30px auto 0;
+}
+
+.menu-filter{
+    display: flex;
+    width: 60%;
+    margin: 0 auto;
+    justify-content: space-around;
+    border: 1px solid #bbb;
+    border-radius: 30px;
+}
+
+.filter-item{
+    font-family: "Playfair Display", sans-serif;
+    font-size: 16px;
+    color: #241d26;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.filter-item.active{
+    color: #f96882;
+    transition: all ease .2s;
+}
+
+/* pricing item */
+.pricing-plan.container{
+    padding: 0;
+}
+
+.pricing-menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.pricing-item{
+    width: 49%;
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.pricing-item .logo i{
+    font-size: 250%;
+    color: #f96882;
+    transition: all ease-in-out .5s;
+}
+
+.pricing-item .logo{
+    background-color: #f3f3f3;
+    border-radius: 50%;
+    z-index: -2;
+    padding: 20px;
+    margin-left: 15px;
+    position: relative;
+}
+
+.pricing-item .logo::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    z-index: -1;
+    transform: scale(0);
+    transition: all ease-in-out .5s;
+}
+
+.pricing-item:hover .logo::after{
+    background-color: #f96882;
+    transform: scale(1);
+}
+
+.pricing-item:hover .logo i{
+    color: #fff;
+}
+
+.pricing-item .price{
+    font-family: "Playfair Display", sans-serif;
+    font-variant-numeric: lining-nums;
+    color: #f96882;
+    font-size: 150%;
+    margin-right: 15px;
+}
+
+.pricing-item .heading{
+    flex-grow: 1;
+    padding-left: 20px;
+}
+
+.pricing-item h4{
+    font-family: "Playfair Display", sans-serif;
+    letter-spacing: .5px;
+    font-size: 22px;
+}
+
+.pricing-item .description{
+    color: #888;
+}

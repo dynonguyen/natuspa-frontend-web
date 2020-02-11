@@ -19,11 +19,11 @@
 <body class="preload">
 
     <!-- Loading ......... -->
-    <div class="loader" id="loader">
+    <!-- <div class="loader" id="loader">
         <div class="loader-inner">
             <img src="./imgs/loader.svg" alt="Loader" class="loader-img">
         </div>
-    </div>
+    </div> -->
 
     <!-- scroll top -->
     <a class="scroll-top link-text" href="#home">Top</a>
@@ -221,6 +221,7 @@
         </div>
     </header>
 
+    <!-- service section -->
     <div class="services-section container" id="services">
         <div class="row">
             <div class="spacer-clearfix" style="height: 80px;"></div>
@@ -294,6 +295,7 @@
         </div>
     </div>
 
+    <!-- about-section -->
     <div class="about-section container-fluid" id="about">
         <div class="row">
             <div class="video-box col-lg-6 col-md-12">
@@ -321,6 +323,7 @@
         <div class="spacer-clearfix" style="height: 80px;"></div>
     </div>
 
+    <!-- testimonial section -->
     <div class="testimonial-section container" id="testimonial">
         <div class="section-title">Our Client Say</div>
         <div class="spacer-clearfix" style="height: 35px;"></div>
@@ -395,6 +398,7 @@
         <div class="spacer-clearfix" style="height: 80px;"></div>
     </div>
 
+    <!-- appointment & form section -->
     <div class="appointment-section container-fluid">
         <div class="container">
             <div class="row">
@@ -445,15 +449,107 @@
                         </div>
                     </form>
                 </div>
-                <div class="spacer-clearfix" style="height: 90px;"></div>
+                <div class="spacer-clearfix" style="height: 80px;"></div>
             </div>
+        </div>
+    </div>
+
+    <!-- pricing plan -->
+    <div class="pricing-plan container">
+        <div class="spacer-clearfix" style="height: 80px;"></div>
+        <div class="row">
+            <div class="heading col-12">
+                <div class="main-heading section-title">pricing plan</div>
+                <div class="sub-heading">
+                    <p>Welcome to the Natuspa Day Med Spa! A wellness luxury spa centerdedicatedto inspiring Life in
+                        Balance.
+                    </p>
+                </div>
+            </div>
+            <div class="spacer-clearfix" style="height: 24px;"></div>
+            <div class="menu-filter">
+                <div class="filter-item active" title="All" data-id="all">All</div>
+                <div class="filter-item" title="Facial" data-id="facial">Facial</div>
+                <div class="filter-item" title="Waxing" data-id="waxing">Waxing</div>
+                <div class="filter-item" title="Treatments" data-id="treatments">Treatments</div>
+                <div class="filter-item" title="Massage" data-id="massage">Massage</div>
+                <div class="filter-item" title="Nail" data-id="nail">Nail</div>
+            </div>
+            <div class="spacer-clearfix" style="height: 40px;"></div>
+            <ul class="pricing-menu col-12">
+                <li class="pricing-item all facial massage">
+                    <span class="logo"><i class="natuspa-icon-oil"></i></span>
+                    <div class="heading">
+                        <h4>Swedish Massage</h4>
+                        <div class="description">Lorem ipsum dolor sit amet ...</div>
+                    </div>
+                    <span class="price">$93.55</span>
+                </li>
+                <li class="pricing-item all massage treatments">
+                    <span class=" logo"><i class="natuspa-icon-stone"></i></span>
+                    <div class="heading">
+                        <h4>Massage Stone</h4>
+                        <div class="description">Lorem ipsum dolor sit amet ...</div>
+                    </div>
+                    <span class="price">$99.99</span>
+                </li>
+                <li class="pricing-item all nail treatments waxing">
+                    <span class="logo"><i class="natuspa-icon-polish"></i></span>
+                    <div class="heading">
+                        <h4>Nail Care</h4>
+                        <div class="description">Lorem ipsum dolor sit amet ...</div>
+                    </div>
+                    <span class="price">$25.95</span>
+                </li>
+                <li class="pricing-item all treatments massage">
+                    <span class="logo"><i class="natuspa-icon-massage-1"></i></span>
+                    <div class="heading">
+                        <h4>Body Treatments</h4>
+                        <div class="description">Lorem ipsum dolor sit amet ...</div>
+                    </div>
+                    <span class="price">$105.5</span>
+                </li>
+                <li class="pricing-item all facial waxing nail">
+                    <span class="logo"><i class="natuspa-icon-cramp"></i></span>
+                    <div class="heading">
+                        <h4>Vein Sclerotherapy</h4>
+                        <div class="description">Lorem ipsum dolor sit amet ...</div>
+                    </div>
+                    <span class="price">$73.95</span>
+                </li>
+                <li class="pricing-item all facial massage">
+                    <span class="logo"><i class="natuspa-icon-facial-treatment"></i></span>
+                    <div class="heading">
+                        <h4>Derm Young Facial</h4>
+                        <div class="description">Lorem ipsum dolor sit amet ...</div>
+                    </div>
+                    <span class="price">$63.35</span>
+                </li>
+                <li class="pricing-item all waxing">
+                    <span class="logo"><i class="natuspa-icon-depilation"></i></span>
+                    <div class="heading">
+                        <h4>Natural Waxing</h4>
+                        <div class="description">Lorem ipsum dolor sit amet ...</div>
+                    </div>
+                    <span class="price">$55.95</span>
+                </li>
+                <li class="pricing-item all treatments">
+                    <span class="logo"><i class="natuspa-icon-spa-1"></i></span>
+                    <div class="heading">
+                        <h4>Express Treatments</h4>
+                        <div class="description">Lorem ipsum dolor sit amet ...</div>
+                    </div>
+                    <span class="price">$83.55</span>
+                </li>
+            </ul>
+            <span id="filter-option"></span>
         </div>
     </div>
 
     <script src="./vendor/js/jquery-v3.4.1.min.js"></script>
     <script src="./vendor/js/bootstrap.min.js"></script>
     <script src="./vendor/js/jquery.waypoints.min.js"></script>
-    <script src="https://kit.fontawesome.com/7534282567.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/7534282567.js" crossorigin="anonymous"></script> -->
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="./vendor/js/datetimepicker-master/build/jquery.datetimepicker.full.js"></script>
     <script src="./resource/js/script.js"></script>

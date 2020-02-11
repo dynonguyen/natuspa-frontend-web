@@ -295,3 +295,68 @@
         transform: translate3d(4px, 0, 0);
     }
 }
+
+/* quicksand effect */
+.quicksand-animate-on{
+    animation: quicksandOn .35s ease-out both;
+    -webkit-animation: quicksandOn .35s ease-out both;
+}
+
+@keyframes quicksandOn{
+    0%{
+        opacity: .8;
+    }50%{
+        opacity: .4;
+        transform: scale3d(.4, .4, 0);
+    }
+    100%{
+        width: 0;
+        opacity: 0;
+        transform: scale3d(0, 0, 0);
+    }
+}
+
+@-webkit-keyframes quicksandOn{
+    0%{
+        opacity: .8;
+    }50%{
+        opacity: .4;
+        transform: scale3d(.4, .4, 0);
+    }
+    100%{
+        width: 0;
+        opacity: 0;
+        transform: scale3d(0, 0, 0);
+    }
+}
+
+.quicksand-animate-off{
+    animation: quicksandOff .35s ease-out both;
+    -webkit-animation: quicksandOff .35s ease-out both;
+}
+
+@keyframes quicksandOff{
+    0%{
+        opacity: .4;
+    }50%{
+        opacity: .8;
+        transform: scale3d(.4, .4, 0);
+    }
+    100%{
+        opacity: 1;
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@-webkit-keyframes quicksandOff{
+    0%{
+        opacity: .4;
+    }50%{
+        opacity: .8;
+        transform: scale3d(.4, .4, 0);
+    }
+    100%{
+        opacity: 0;
+        transform: scale3d(1, 1, 1);
+    }
+}

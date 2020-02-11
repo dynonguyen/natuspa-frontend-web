@@ -387,10 +387,10 @@ $(document).ready(function () {
     option.on('click', function () {
         $('.current-option').text($(this).text());
         $('.current-option').attr('data-value', $(this).attr('data-value'));
-        if($('.current-option').attr('data-value') != '0')
-            $('.current-option').css('color', '#000');  
+        if ($('.current-option').attr('data-value') != '0')
+            $('.current-option').css('color', '#000');
         else
-        $('.current-option').css('color', '#888');  
+            $('.current-option').css('color', '#888');
         flipUp();
     });
 
@@ -406,12 +406,12 @@ $(document).ready(function () {
         let regex = /^([a-zA-Z0-9_])+\@(([a-zA-Z]{3,})+\.com)$/i;
         return regex.test(email);
     }
-    var isPhoneNumber = function(phoneNumber){
+    var isPhoneNumber = function (phoneNumber) {
         let regex = /^\d{10,11}$/
         return regex.test(phoneNumber);
     }
-    var checkTypeOfServices = function(tOS){
-        if(tOS.attr('data-value') == '0')
+    var checkTypeOfServices = function (tOS) {
+        if (tOS.attr('data-value') == '0')
             return false;
         return true;
     }
@@ -432,21 +432,21 @@ $(document).ready(function () {
         input.each(function () {
             if (isEmpty($(this).val()))
                 onError($(this));
-            else 
+            else
                 onNoError($(this));
         });
         // check email
-        if(isEmail($('#email').val()))
+        if (isEmail($('#email').val()))
             onNoError($('#email'));
         else
             onError($('#email'));
         // check phone number
-        if(isPhoneNumber($('#phone-number').val()))
+        if (isPhoneNumber($('#phone-number').val()))
             onNoError($('#phone-number'));
         else
             onError($('#phone-number'));
         // check type of services
-        if(checkTypeOfServices($('.current-option')))
+        if (checkTypeOfServices($('.current-option')))
             onNoError($('.current-option'));
         else
             onError($('.current-option'));
@@ -454,5 +454,41 @@ $(document).ready(function () {
 
     $('.submit-btn').click(function () {
         validateForm();
+    });
+
+    // ========================= Filter - Pricing Plan ==========================
+    // change filter menu activity
+    let activeFilter = $('.filter-item.active');
+    var filterPricing = function () {
+        $('.pricing-menu li').each(function () {
+            let option = $('#filter-option').attr('data-id');
+            let currentElem = $(this);
+            // fix error "can't removeClass('quicksand-animate) when ele.css(display, none)"
+            if (currentElem.css('display') === 'none')
+                currentElem.css('display', 'flex');
+
+            // add animation quicksand on
+            if (currentElem.hasClass(option) === false && option !== 'all') {
+                currentElem.addClass('quicksand-animate-on').one('webkitAnimationEnd', function () {
+                    currentElem.removeClass('quicksand-animate-on');
+                    currentElem.css('display', 'none');
+                });
+            }
+            //  add animation quicksand off
+            if(option === 'all'){
+                currentElem.addClass('quicksand-animate-off').one('webkitAnimationEnd', function () {
+                    currentElem.removeClass('quicksand-animate-off');
+                });
+            }
+        });
+    }
+
+    $('.filter-item').on('click', function () {
+        activeFilter.removeClass('active');
+        $(this).addClass('active');
+        activeFilter = $(this);
+        // add data-id for filter option
+        $('#filter-option').attr('data-id', activeFilter.attr('data-id'));
+        filterPricing();
     });
 });

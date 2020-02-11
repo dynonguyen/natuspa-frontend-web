@@ -133,6 +133,19 @@
     .about-main-text{
         padding: 40px 15% 50px 30px !important;
     }
+
+    /* pricing plan ==================== */
+    .menu-filter{
+        width: 85%;
+    }
+
+    .pricing-menu{
+        flex-direction: column;
+    }
+
+    .pricing-item{
+        width: 100%;
+    }
 }
 
 @media only screen and (max-width: 840px) {
@@ -209,6 +222,20 @@
     .form-input input:not(#datepicker):not(#appointment-submit):focus{
         transform: scale(1.05);
     }
+
+    /* pricing plan ===================== */
+    .menu-filter{
+        border: none;
+        flex-wrap: wrap;
+        justify-content: start;
+    }
+
+    .filter-item{
+        margin: 10px;
+        background-color: #efefef;
+        padding: 10px;
+        border-radius: 5px;
+    }
 }
 
 @media only screen and (max-width: 480px) {
@@ -261,6 +288,11 @@
 
     .slick-slide-figure-info .position{
         font-size: 14px;
+    }
+
+     /* pricing plan ===================== */
+    .filter-item{
+        font-size: 15px;
     }
 }
 
