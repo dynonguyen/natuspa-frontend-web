@@ -12,7 +12,9 @@
     <link rel="stylesheet" href="./vendor/css/bootstrap.min.css">
     <link rel="stylesheet" href="./vendor/fonts/fontawesome-5.0.13/css/all.css">
     <link rel="stylesheet" href="./vendor/fonts/natuspa-font/css/natuspa-icons.css">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="./vendor/js/slick/slick.css">
+    <link rel="stylesheet" href="./vendor/js/slick/slick-theme.css">
+    <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" /> -->
     <link rel="stylesheet" href="./vendor/js/datetimepicker-master/jquery.datetimepicker.css">
     <link rel="stylesheet" href="./vendor/js/Magnific-Popup-master/magnific-popup.css">
 </head>
@@ -215,8 +217,8 @@
                     </div>
                 </div>
             </div>
-            <a href="#" class="slide-input" id="prev-slide"></a>
-            <a href="#" class="slide-input" id="next-slide"></a>
+            <a href="#" class="slide-control" id="prev-slide"></a>
+            <a href="#" class="slide-control" id="next-slide"></a>
             <ol class="slide-dot">
                 <li class="active"></li>
                 <li></li>
@@ -551,32 +553,36 @@
             </ul>
             <span id="filter-option"></span>
         </div>
+        <div class="spacer-clearfix" style="height: 60px;"></div>
     </div>
 
     <!-- collection section -->
-    <div class="collection container-fluid" style="overflow-y: scroll;">
-        <div class="spacer-clearfix" style="height: 70px;"></div>
+    <div class="collection">
         <a href="./imgs/collection/gallery-1.jpg" class="collect-item">
-            <img src="./imgs/collection/gallery-1.jpg" alt="Gallery-1" class="collect-img">
+            <img src="./imgs/collection/gallery-1.jpg" alt="Gallery-1" class="collect-img" id="gallery-1">
+            <span class="plus-icon"><i class="fal fa-plus"></i></span>
         </a>
         <a href="./imgs/collection/gallery-2.jpg" class="collect-item">
-            <img src="./imgs/collection/gallery-2.jpg" alt="Gallery-2" class="collect-img">
+            <img src="./imgs/collection/gallery-2.jpg" alt="Gallery-2" class="collect-img" id="gallery-2">
+            <span class="plus-icon"><i class="fal fa-plus"></i></span>
         </a>
         <a href="./imgs/collection/gallery-3.jpg" class="collect-item">
-            <img src="./imgs/collection/gallery-3.jpg" alt="Gallery-3" class="collect-img">
+            <img src="./imgs/collection/gallery-3.jpg" alt="Gallery-3" class="collect-img" id="gallery-3">
+            <span class="plus-icon"><i class="fal fa-plus"></i></span>
         </a>
         <a href="./imgs/collection/gallery-4.jpg" class="collect-item">
-            <img src="./imgs/collection/gallery-4.jpg" alt="Gallery-4" class="collect-img">
+            <img src="./imgs/collection/gallery-4.jpg" alt="Gallery-4" class="collect-img" id="gallery-4">
+            <span class="plus-icon"><i class="fal fa-plus"></i></span>
         </a>
     </div>
-
-    <a href="https://www.youtube.com/watch?v=__kGJZ-kPno" class="play-video">Click</a>
+    <div class="spacer-clearfix" style="height: 70px;"></div>
 
     <script src="./vendor/js/jquery-v3.4.1.min.js"></script>
     <script src="./vendor/js/bootstrap.min.js"></script>
     <script src="./vendor/js/jquery.waypoints.min.js"></script>
     <!-- <script src="https://kit.fontawesome.com/7534282567.js" crossorigin="anonymous"></script> -->
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./vendor/js/slick/slick.min.js"></script>
+    <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
     <script src="./vendor/js/datetimepicker-master/build/jquery.datetimepicker.full.js"></script>
     <script src="./vendor/js/Magnific-Popup-master/jquery.magnific-popup.min.js"></script>
     <script src="./resource/js/script.js"></script>

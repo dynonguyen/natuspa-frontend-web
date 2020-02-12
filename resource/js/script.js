@@ -291,7 +291,7 @@ $(document).ready(function () {
         $('#overlay').css('display', 'block');
         $('.close-btn').show(350);
     });
-    $('.about-section .close-btn').on('click', function(){
+    $('.about-section .close-btn').on('click', function () {
         videoEmbed.hide(350);
         $('#overlay').css('display', 'none');
         $('.close-btn').hide(350);
@@ -510,7 +510,6 @@ $(document).ready(function () {
         type: 'image',
         delegate: 'a',
         fixedContentPos: false,
-        fixedBgPos: true,
         gallery: {
             enabled: true
         },
@@ -524,5 +523,49 @@ $(document).ready(function () {
                 return openerElement.is('img') ? openerElement : openerElement.find('img');
             }
         }
+    });
+
+    // detect mouse direction use JavaScript
+    var direction = '';
+    var oldX = 0;
+    var oldY = 0;
+    var mousemovemethod = function (e) {
+        if (e.pageX > oldX && e.pageY == oldY) {
+            direction = 'left-right';
+        }
+        else if (e.pageX == oldX && e.pageY > oldY) {
+            direction = 'top-bottom';
+        }
+        else if (e.pageX == oldX && e.pageY < oldY) {
+            direction = 'bottom-top'
+        }
+        else if (e.pageX < oldX && e.pageY == oldY) {
+            direction = 'right-left';
+        }
+        oldX = e.pageX;
+        oldY = e.pageY;
+    }
+    document.addEventListener('mousemove', mousemovemethod);
+
+    $('.collect-item').on('mouseenter', function () {
+        let active = $(this);
+        let currentDirec;
+        // static variable : fix the direction is constantly changing
+        if (typeof currentDirec == 'undefined') {
+            currentDirec = direction;
+            document.removeEventListener('mousemove mousedown', mousemovemethod);
+        }
+        // add class fade in
+        active.addClass('appear-' + currentDirec);
+        active.find('.plus-icon').show(150);
+        document.addEventListener('mousemove', mousemovemethod);
+        // mouse leave -> add class fade out and remove class fade in
+        active.on('mouseleave', function () {
+            active.find('.plus-icon').hide(150);
+            active.addClass('disappear-' + currentDirec).one('webkitAnimationEnd', function(){
+                active.removeClass('appear-' + currentDirec);
+                active.removeClass('disappear-' + currentDirec);
+            });
+        });
     });
 });

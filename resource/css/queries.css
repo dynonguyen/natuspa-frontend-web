@@ -252,6 +252,14 @@
         padding: 10px;
         border-radius: 5px;
     }
+
+    /* collection ======================= */
+    .collect-item{
+        width: 33.3%;
+    }
+    #gallery-4{
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 480px) {
@@ -322,6 +330,14 @@
      
     .filter-item{
         font-size: 15px;
+    }
+
+      /* collection ======================= */
+      .collect-item{
+        width: 50%;
+    }
+    #gallery-3{
+        display: none;
     }
 }
 
