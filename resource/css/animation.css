@@ -297,66 +297,115 @@
 }
 
 /* quicksand effect */
-.quicksand-animate-on{
+.quicksand-animate-on {
     animation: quicksandOn .35s ease-out both;
     -webkit-animation: quicksandOn .35s ease-out both;
 }
 
-@keyframes quicksandOn{
-    0%{
+@keyframes quicksandOn {
+    0% {
         opacity: .8;
-    }50%{
+    }
+
+    50% {
         opacity: .4;
         transform: scale3d(.4, .4, 0);
     }
-    100%{
+
+    100% {
         width: 0;
         opacity: 0;
         transform: scale3d(0, 0, 0);
     }
 }
 
-@-webkit-keyframes quicksandOn{
-    0%{
+@-webkit-keyframes quicksandOn {
+    0% {
         opacity: .8;
-    }50%{
+    }
+
+    50% {
         opacity: .4;
         transform: scale3d(.4, .4, 0);
     }
-    100%{
+
+    100% {
         width: 0;
         opacity: 0;
         transform: scale3d(0, 0, 0);
     }
 }
 
-.quicksand-animate-off{
+.quicksand-animate-off {
     animation: quicksandOff .35s ease-out both;
     -webkit-animation: quicksandOff .35s ease-out both;
 }
 
-@keyframes quicksandOff{
-    0%{
+@keyframes quicksandOff {
+    0% {
         opacity: .4;
-    }50%{
+    }
+
+    50% {
         opacity: .8;
         transform: scale3d(.4, .4, 0);
     }
-    100%{
+
+    100% {
         opacity: 1;
         transform: scale3d(1, 1, 1);
     }
 }
 
-@-webkit-keyframes quicksandOff{
-    0%{
+@-webkit-keyframes quicksandOff {
+    0% {
         opacity: .4;
-    }50%{
+    }
+
+    50% {
         opacity: .8;
         transform: scale3d(.4, .4, 0);
     }
-    100%{
+
+    100% {
         opacity: 0;
         transform: scale3d(1, 1, 1);
     }
+}
+
+/* ============================ Collection ============================= */
+/* overlay at start */
+.mfp-fade.mfp-bg {
+    opacity: 0;
+    -webkit-transition: all 0.35s ease-out;
+    -moz-transition: all 0.35s ease-out;
+    transition: all 0.35s ease-out;
+}
+
+/* overlay animate in */
+.mfp-fade.mfp-bg.mfp-ready {
+    opacity: 0.8;
+}
+
+/* overlay animate out */
+.mfp-fade.mfp-bg.mfp-removing {
+    opacity: 0;
+}
+
+/* content at start */
+.mfp-fade.mfp-wrap .mfp-content {
+    opacity: 0;
+    -webkit-transition: all 0.35s ease-out;
+    -moz-transition: all 0.35s ease-out;
+    transition: all 0.35s ease-out;
+}
+
+/* content animate it */
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+    opacity: 1;
+}
+
+/* content animate out */
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+    opacity: 0;
 }

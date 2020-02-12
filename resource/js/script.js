@@ -66,7 +66,7 @@ $(document).ready(function () {
     $('.slide-icon').on('click', function () {
         $('.menu-popup').css('width', '450px');
     });
-    $('.close-menu-icon').on('click', function () {
+    $('.menu-popup .close-icon').on('click', function () {
         $('.menu-popup').css('width', '0');
     });
 
@@ -284,6 +284,19 @@ $(document).ready(function () {
         event.preventDefault();
     });
 
+    // =============================== Embed video ===============================
+    let videoEmbed = $('.video-embed');
+    $('.play-btn').on('click', function () {
+        videoEmbed.show(350);
+        $('#overlay').css('display', 'block');
+        $('.close-btn').show(350);
+    });
+    $('.about-section .close-btn').on('click', function(){
+        videoEmbed.hide(350);
+        $('#overlay').css('display', 'none');
+        $('.close-btn').hide(350);
+    });
+
     // =============================== Slick =====================================
     $('.slick-slide-cite').slick({
         slidesToShow: 1,
@@ -475,7 +488,7 @@ $(document).ready(function () {
                 });
             }
             //  add animation quicksand off
-            if(option === 'all'){
+            if (option === 'all') {
                 currentElem.addClass('quicksand-animate-off').one('webkitAnimationEnd', function () {
                     currentElem.removeClass('quicksand-animate-off');
                 });
@@ -490,5 +503,26 @@ $(document).ready(function () {
         // add data-id for filter option
         $('#filter-option').attr('data-id', activeFilter.attr('data-id'));
         filterPricing();
+    });
+
+    // ========================= Collection section =============================
+    $('.collection').magnificPopup({
+        type: 'image',
+        delegate: 'a',
+        fixedContentPos: false,
+        fixedBgPos: true,
+        gallery: {
+            enabled: true
+        },
+        removalDelay: 300,
+        mainClass: 'mfp-fade',
+        zoom: {
+            enabled: true,
+            duration: 550,
+            easing: 'ease-in-out',
+            opener: function (openerElement) {
+                return openerElement.is('img') ? openerElement : openerElement.find('img');
+            }
+        }
     });
 });

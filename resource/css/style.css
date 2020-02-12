@@ -19,6 +19,7 @@ html,
 body {
     max-width: 100%;
     overflow-x: hidden;
+    position: relative;
 }
 
 ::-webkit-scrollbar {
@@ -35,6 +36,16 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
     background-color: #888;
+}
+
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .7);
+    z-index: 9999999999999;
 }
 
 /* ============================================ !! ============================================ */
@@ -456,12 +467,12 @@ nav.nav-sticky {
     z-index: 1000;
 }
 
-.close-menu-icon {
+.close-icon {
     position: relative;
     left: 400px;
 }
 
-.close-menu-icon i {
+.close-icon i {
     width: 50px;
     line-height: 50px;
     font-weight: 300;
@@ -471,7 +482,7 @@ nav.nav-sticky {
     text-align: center;
 }
 
-.close-menu-icon i:hover {
+.close-icon i:hover {
     background-color: #f8889d;
 }
 
@@ -732,6 +743,10 @@ nav.nav-sticky {
 
 /* ============================================ !! ============================================ */
 /* ============================================ About section ============================== */
+.about-section {
+    position: relative;
+}
+
 .video-box {
     background-image: url('/imgs/about-1.jpg');
     background-position: center;
@@ -770,6 +785,42 @@ nav.nav-sticky {
     left: -30px;
     bottom: -30px;
     right: -30px;
+}
+
+.video-embed {
+    position: fixed;
+    width: 60%;
+    height: 500px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    z-index: 99999999999;
+    display: none;
+}
+
+.close-btn i{
+    width: 50px;
+    line-height: 50px;
+    font-weight: 300;
+    background-color: rgba(0, 0, 0, .7);
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    transition: all ease .35s;
+}
+
+.close-btn i:hover{
+    background-color: rgba(36, 28, 39, .9);
+}
+
+.close-btn{
+    position: fixed;
+    top: 18%;
+    right: 20%;
+    z-index: 99999999999999999;
+    display: none;
 }
 
 .about-main-text {
@@ -927,7 +978,7 @@ nav.nav-sticky {
 }
 
 .form-input input,
-.your-service .current-option{
+.your-service .current-option {
     width: 100%;
     font-size: 16px;
     font-weight: 400;
@@ -939,25 +990,25 @@ nav.nav-sticky {
 }
 
 .your-service .current-option,
-input::placeholder{
-   color: #888;
-   margin-bottom: 0 !important;
+input::placeholder {
+    color: #888;
+    margin-bottom: 0 !important;
 }
 
-.form-input input:not(#datepicker):not(#appointment-submit):focus{
+.form-input input:not(#datepicker):not(#appointment-submit):focus {
     transform: scale(1.1);
     transition: all ease .35s;
 }
 
-.your-service .current-option{
+.your-service .current-option {
     border-bottom: 1px solid #ddd;
 }
 
-.your-service{
+.your-service {
     position: relative;
 }
 
-.your-service .dropdown-icon{
+.your-service .dropdown-icon {
     font-size: 16px;
     position: absolute;
     top: 14px;
@@ -966,22 +1017,22 @@ input::placeholder{
     transition: all ease .5s;
 }
 
-.option-menu{
+.option-menu {
     overflow-y: scroll;
     opacity: 0;
     height: 0;
     margin: 0 !important;
 }
 
-.dropdown-icon i{
+.dropdown-icon i {
     transition: all ease .5s;
 }
 
-.dropdown-icon i.rotate{
+.dropdown-icon i.rotate {
     transform: rotate(-540deg);
 }
 
-.option-menu li{
+.option-menu li {
     width: 100%;
     background-color: #fff;
     padding: 14px 20px;
@@ -989,12 +1040,12 @@ input::placeholder{
     transition: all ease .35s;
 }
 
-.option-menu li:hover{
+.option-menu li:hover {
     background-color: #f96882;
     color: #fff;
 }
 
-.error{
+.error {
     position: absolute;
     color: red;
     top: 12px;
@@ -1003,18 +1054,18 @@ input::placeholder{
     display: none;
 }
 
-.error span{
+.error span {
     position: relative;
     top: 3px;
 }
 
-.your-service .error{
+.your-service .error {
     right: 60px;
 }
 
 /* ============================================ !! ============================================ */
 /* ======================== Pricing plan ============================ */
-.pricing-plan .sub-heading{
+.pricing-plan .sub-heading {
     text-align: center;
     font-size: 18px;
     font-weight: 400;
@@ -1024,7 +1075,7 @@ input::placeholder{
     margin: 30px auto 0;
 }
 
-.menu-filter{
+.menu-filter {
     display: flex;
     width: 60%;
     margin: 0 auto;
@@ -1033,7 +1084,7 @@ input::placeholder{
     border-radius: 30px;
 }
 
-.filter-item{
+.filter-item {
     font-family: "Playfair Display", sans-serif;
     font-size: 16px;
     color: #241d26;
@@ -1041,23 +1092,23 @@ input::placeholder{
     cursor: pointer;
 }
 
-.filter-item.active{
+.filter-item.active {
     color: #f96882;
     transition: all ease .2s;
 }
 
 /* pricing item */
-.pricing-plan.container{
+.pricing-plan.container {
     padding: 0;
 }
 
-.pricing-menu{
+.pricing-menu {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
-.pricing-item{
+.pricing-item {
     width: 49%;
     display: flex;
     align-items: center;
@@ -1065,13 +1116,13 @@ input::placeholder{
     border-bottom: 1px solid #ddd;
 }
 
-.pricing-item .logo i{
+.pricing-item .logo i {
     font-size: 250%;
     color: #f96882;
     transition: all ease-in-out .5s;
 }
 
-.pricing-item .logo{
+.pricing-item .logo {
     background-color: #f3f3f3;
     border-radius: 50%;
     z-index: -2;
@@ -1080,7 +1131,7 @@ input::placeholder{
     position: relative;
 }
 
-.pricing-item .logo::after{
+.pricing-item .logo::after {
     content: '';
     width: 100%;
     height: 100%;
@@ -1093,16 +1144,16 @@ input::placeholder{
     transition: all ease-in-out .5s;
 }
 
-.pricing-item:hover .logo::after{
+.pricing-item:hover .logo::after {
     background-color: #f96882;
     transform: scale(1);
 }
 
-.pricing-item:hover .logo i{
+.pricing-item:hover .logo i {
     color: #fff;
 }
 
-.pricing-item .price{
+.pricing-item .price {
     font-family: "Playfair Display", sans-serif;
     font-variant-numeric: lining-nums;
     color: #f96882;
@@ -1110,17 +1161,17 @@ input::placeholder{
     margin-right: 15px;
 }
 
-.pricing-item .heading{
+.pricing-item .heading {
     flex-grow: 1;
     padding-left: 20px;
 }
 
-.pricing-item h4{
+.pricing-item h4 {
     font-family: "Playfair Display", sans-serif;
     letter-spacing: .5px;
     font-size: 22px;
 }
 
-.pricing-item .description{
+.pricing-item .description {
     color: #888;
 }

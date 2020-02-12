@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="./vendor/fonts/natuspa-font/css/natuspa-icons.css">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="./vendor/js/datetimepicker-master/jquery.datetimepicker.css">
+    <link rel="stylesheet" href="./vendor/js/Magnific-Popup-master/magnific-popup.css">
 </head>
 
 <body class="preload">
@@ -24,6 +25,9 @@
             <img src="./imgs/loader.svg" alt="Loader" class="loader-img">
         </div>
     </div> -->
+
+    <!-- overlay for focus -->
+    <div id="overlay" style="display: none;"></div>
 
     <!-- scroll top -->
     <a class="scroll-top link-text" href="#home">Top</a>
@@ -135,7 +139,7 @@
         </nav>
         <!-- menu popup -->
         <div class="menu-popup">
-            <span class="close-menu-icon"><i class="fal fa-times"></i></span>
+            <span class="close-icon"><i class="fal fa-times"></i></span>
             <div class="content-wrap">
                 <h1 class="title">Natuspa</h1>
                 <p class="text">
@@ -299,10 +303,9 @@
     <div class="about-section container-fluid" id="about">
         <div class="row">
             <div class="video-box col-lg-6 col-md-12">
-                <a href="https://www.youtube.com/watch?v=tKkJnauWFgA&feature=emb_title" class="play-btn"
-                    target="_blank">
+                <div class="play-btn">
                     <i class="fas fa-play"></i>
-                </a>
+                </div>
             </div>
             <div class="about-main-text col-lg-6 col-md-12">
                 <h2 class="section-title">Our Story !</h2>
@@ -320,6 +323,10 @@
                 <a class="link-text text-linear-effect">Read More</a>
             </div>
         </div>
+        <iframe src="https://www.youtube.com/embed/zHCyHodIlCY" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="video-embed">
+        </iframe>
+        <span class="close-btn"><i class="fal fa-times"></i></span>
         <div class="spacer-clearfix" style="height: 80px;"></div>
     </div>
 
@@ -546,12 +553,32 @@
         </div>
     </div>
 
+    <!-- collection section -->
+    <div class="collection container-fluid" style="overflow-y: scroll;">
+        <div class="spacer-clearfix" style="height: 70px;"></div>
+        <a href="./imgs/collection/gallery-1.jpg" class="collect-item">
+            <img src="./imgs/collection/gallery-1.jpg" alt="Gallery-1" class="collect-img">
+        </a>
+        <a href="./imgs/collection/gallery-2.jpg" class="collect-item">
+            <img src="./imgs/collection/gallery-2.jpg" alt="Gallery-2" class="collect-img">
+        </a>
+        <a href="./imgs/collection/gallery-3.jpg" class="collect-item">
+            <img src="./imgs/collection/gallery-3.jpg" alt="Gallery-3" class="collect-img">
+        </a>
+        <a href="./imgs/collection/gallery-4.jpg" class="collect-item">
+            <img src="./imgs/collection/gallery-4.jpg" alt="Gallery-4" class="collect-img">
+        </a>
+    </div>
+
+    <a href="https://www.youtube.com/watch?v=__kGJZ-kPno" class="play-video">Click</a>
+
     <script src="./vendor/js/jquery-v3.4.1.min.js"></script>
     <script src="./vendor/js/bootstrap.min.js"></script>
     <script src="./vendor/js/jquery.waypoints.min.js"></script>
     <!-- <script src="https://kit.fontawesome.com/7534282567.js" crossorigin="anonymous"></script> -->
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="./vendor/js/datetimepicker-master/build/jquery.datetimepicker.full.js"></script>
+    <script src="./vendor/js/Magnific-Popup-master/jquery.magnific-popup.min.js"></script>
     <script src="./resource/js/script.js"></script>
 </body>
 

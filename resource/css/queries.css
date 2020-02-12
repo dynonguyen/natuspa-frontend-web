@@ -114,6 +114,14 @@
         height: 540px !important;
     }
 
+    .video-embed{
+        width: 90%;
+    }
+
+    .close-btn{
+        right: 5%;
+    }
+
     /* appointment-section ============== */
     .appointment-section .pre-heading{
         font-size: 16px;
@@ -210,6 +218,14 @@
         height: 420px !important;
     }
 
+    .video-embed{
+        width: 90%;
+        height: 350px;
+    }
+
+    .close-btn{
+        top: 26%;
+    }
     /* appointment section */
     .submit-btn{
         margin-top: 30px;
@@ -240,7 +256,7 @@
 
 @media only screen and (max-width: 480px) {
 
-    /* ======================== Header ========================*/
+    /* ============================= Header =============================*/
     .slide-text {
         max-width: 360px;
         margin-left: -180px;
@@ -263,6 +279,15 @@
 
     .book-now-btn {
         font-size: 12px !important;
+    }
+
+    /* ======================== about section ============================== */
+    .video-embed{
+        width: 100%;
+    }
+
+    .close-btn{
+        right: 0;
     }
 
     /* ======================== Testimonial section ======================== */
@@ -291,6 +316,10 @@
     }
 
      /* pricing plan ===================== */
+     .pricing-plan .sub-heading{
+        padding: 0 20px;
+     }
+     
     .filter-item{
         font-size: 15px;
     }
@@ -318,5 +347,22 @@
     .slick-center img{
         width: 80px !important;
         transform: translate3d(65%, 0, 0) !important;
+    }
+
+    /* ============================ pricing plan =========================== */
+    .pricing-item .logo i{
+        font-size: 200%;
+    }
+
+    .pricing-item h4{
+        font-size: 20px;
+    }
+
+    .pricing-item .description{
+        font-size: 14px;
+    }
+
+    .pricing-item .price{
+        font-size: 125%;
     }
 }
