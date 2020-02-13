@@ -607,13 +607,15 @@ $(document).ready(function () {
     $('.counter-item').on('click', countSync);
 
     // ====================== slick slider team ===============================
+    // clone 1 item for slick when show all 3 slide
+    $('.team-item').clone().addClass('clone').appendTo(('.team-slider'));
     $('.team-slider').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
         arrows: false,
-        focusOnSelect: true,
         infinite: true,
-        centerPadding: 0,
+        autoplay: true,
+        autoplaySpeed: 1000,
         responsive: [
             {
                 breakpoint: 992,

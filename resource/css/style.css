@@ -93,6 +93,7 @@ a,
 a:hover,
 a:active {
     outline: none !important;
+    text-decoration: none !important;
 }
 
 img {
