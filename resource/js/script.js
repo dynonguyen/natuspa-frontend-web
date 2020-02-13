@@ -297,7 +297,7 @@ $(document).ready(function () {
         $('.close-btn').hide(350);
     });
 
-    // =============================== Slick =====================================
+    // =============================== Slick of testimonial =====================================
     $('.slick-slide-cite').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -577,22 +577,22 @@ $(document).ready(function () {
         let count = [0, 0, 0];
         let intervalID = setInterval(function () {
             let flag = true;
-            for(let i = 0; i < 3; ++i){
-                if(count[i] < maxNumber[i]){
+            for (let i = 0; i < 3; ++i) {
+                if (count[i] < maxNumber[i]) {
                     flag = false;
-                    if(!i){
+                    if (!i) {
                         count[i] += syncRate_1;
-                    }else{
+                    } else {
                         ++count[i];
                     }
                 }
             }
-            if(flag){
+            if (flag) {
                 clearInterval(intervalID);
             }
             // fixed: over max number
-            for(let i = 0; i < 3; ++i){
-                if(count[i] > maxNumber[i]){
+            for (let i = 0; i < 3; ++i) {
+                if (count[i] > maxNumber[i]) {
                     count[i] = maxNumber[i];
                 }
             }
@@ -605,4 +605,29 @@ $(document).ready(function () {
     }
     countSync();
     $('.counter-item').on('click', countSync);
+
+    // ====================== slick slider team ===============================
+    $('.team-slider').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: false,
+        focusOnSelect: true,
+        infinite: true,
+        centerPadding: 0,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            }, {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
 });
