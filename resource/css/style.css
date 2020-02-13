@@ -143,6 +143,7 @@ img {
     font-size: 150%;
     margin-right: 15px;
 }
+
 /* ============================================ !! ============================================ */
 /* ============== Header ================= */
 header {
@@ -848,6 +849,7 @@ nav.nav-sticky {
     margin: 10px 0 30px;
     color: #4F4D50;
     letter-spacing: .4px;
+    text-align: left;
 }
 
 .about-main-text p {
@@ -1277,4 +1279,103 @@ input::placeholder {
     font-size: 20px;
     left: 50%;
     margin-left: -42px;
+}
+
+/* ========================= Counter section ====================== */
+.counter-section{
+    background-image: url('/imgs/pattern.png');
+    background-position: center center;
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.counter-section .container{
+    max-width: 1200px;
+    padding: 0;
+}
+
+.counter-section .heading {
+    font-family: "Playfair Display", sans-serif;
+    color: #fff;
+    text-align: left;
+    /* Back to the left */
+    margin-left: -4.5vw;
+}
+
+.counter-section .pre-heading {
+    font-size: 20px;
+    font-style: italic;
+    letter-spacing: .7px;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+}
+
+.counter-section .main-heading {
+    text-transform: uppercase;
+    font-size: 70px;
+    line-height: 70px;
+}
+
+.counter-section .sub-heading{
+    max-width: 100%;
+    font-family:  "Playfair Display", serif;
+    text-align: left;
+    margin-left: 0;
+    color: #eee;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: .5px;
+}
+
+/* counter item ======*/
+.counter-section .counter{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+     /* Back to the right */
+    transform: translateX(28%);
+}
+
+.counter-item{
+    text-align: center;
+}
+
+.number{
+    background-color: #fff;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: relative;
+    /* align center */
+    display: inline-block;
+}
+
+.number::before{
+    content: '';
+    border: 2px dashed #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    bottom: -10px;
+    right: -10px;
+}
+
+.number span{
+    font-size: 28px;
+    font-weight: 700;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-right: 0;
+}
+
+.counter-item .title{
+    margin-top: 20px;
+    color: #fff;
+    font-weight: 400;
+    letter-spacing: .7px;
+    font-size: 24px;
 }

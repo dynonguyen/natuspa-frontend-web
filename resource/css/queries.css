@@ -34,6 +34,16 @@
     .nav-icon {
         padding-right: 20px;
     }
+
+    /* ======================= counter section ================= */
+    .counter-section .heading {
+        margin-left: 0vw;
+    }
+
+    .counter-section .counter {
+        justify-content: space-around;
+        transform: translateX(0%);
+    }
 }
 
 @media only screen and (max-width: 1201px) {
@@ -108,57 +118,71 @@
     }
 }
 
-@media only screen and (max-width: 992px){
+@media only screen and (max-width: 992px) {
+
     /* about section ===================== */
-    .video-box{
+    .video-box {
         height: 540px !important;
     }
 
-    .video-embed{
+    .video-embed {
         width: 90%;
     }
 
-    .close-btn{
+    .close-btn {
         right: 5%;
     }
 
     /* appointment-section ============== */
-    .appointment-section .pre-heading{
+    .appointment-section .pre-heading {
         font-size: 16px;
         margin-bottom: 10px;
     }
 
-    .appointment-section .main-heading{
+    .appointment-section .main-heading {
         font-size: 48px;
         line-height: 45px;
         margin-bottom: 10px;
     }
 
-    .appointment-section .pre-heading{
-        font-size: 16px;
-    }
-
-    .about-main-text{
+    .about-main-text {
         padding: 40px 15% 50px 30px !important;
     }
 
     /* pricing plan ==================== */
-    .menu-filter{
+    .menu-filter {
         width: 85%;
     }
 
-    .pricing-menu{
+    .pricing-menu {
         flex-direction: column;
     }
 
-    .pricing-item{
+    .pricing-item {
         width: 100%;
     }
 
     /* spa packages =================== */
-    .package-box.center{
+    .package-box.center {
         transform: translateY(300px);
     }
+
+    /* counter ======================== */
+    .counter-section .heading {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .counter-section .main-heading {
+        margin-bottom: 20px;
+    }
+
+    .counter-section .sub-heading {
+        text-align: center;
+        max-width: 70%;
+        margin: 0 auto;
+    }
+
 }
 
 @media only screen and (max-width: 840px) {
@@ -209,49 +233,51 @@
         padding: 8px 30px !important;
         letter-spacing: .5px;
     }
+
     /* services section ==================== */
-    .service .spacer-clearfix{
+    .service .spacer-clearfix {
         height: 50px !important;
     }
 
-    .services-section .spacer-clearfix:last-child{
+    .services-section .spacer-clearfix:last-child {
         height: 30px !important;
     }
 
     /* about section ===================== */
-    .video-box{
+    .video-box {
         height: 420px !important;
     }
 
-    .video-embed{
+    .video-embed {
         width: 90%;
         height: 350px;
     }
 
-    .close-btn{
+    .close-btn {
         top: 26%;
     }
+
     /* appointment section */
-    .submit-btn{
+    .submit-btn {
         margin-top: 30px;
     }
 
-    .submit-btn .book-now-btn{
+    .submit-btn .book-now-btn {
         font-size: 16px !important;
     }
 
-    .form-input input:not(#datepicker):not(#appointment-submit):focus{
+    .form-input input:not(#datepicker):not(#appointment-submit):focus {
         transform: scale(1.05);
     }
 
     /* pricing plan ===================== */
-    .menu-filter{
+    .menu-filter {
         border: none;
         flex-wrap: wrap;
         justify-content: start;
     }
 
-    .filter-item{
+    .filter-item {
         margin: 10px;
         background-color: #efefef;
         padding: 10px;
@@ -259,25 +285,59 @@
     }
 
     /* collection ======================= */
-    .collect-item{
+    .collect-item {
         width: 33.3%;
     }
-    #gallery-4{
+
+    #gallery-4 {
         display: none;
     }
 
     /* spa packages ===================== */
-    .spa-packages .heading{
+    .spa-packages .heading {
         margin-bottom: 20px;
     }
 
-    .package-box.center{
+    .package-box.center {
         transform: translateY(0px) scale(.95);
     }
 
-    .package-box{
+    .package-box {}
 
+    /* ========================= Counter section ====================== */
+    .counter-section {
+        background-image: url('/imgs/pattern.png');
+        background-position: center center;
+        padding-top: 120px;
+        padding-bottom: 120px;
     }
+
+    .counter-section .main-heading {
+        font-size: 55px;
+        line-height: 55px;
+    }
+
+    .counter-section .sub-heading {
+        max-width: 80%;
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    /* counter item ======*/
+    .counter-section .counter {
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .counter-item:not(:last-child){
+        margin-bottom: 50px;
+    }
+
+    .counter-item .title{
+        margin-bottom: 0;
+    }
+
 }
 
 @media only screen and (max-width: 480px) {
@@ -308,53 +368,54 @@
     }
 
     /* ======================== about section ============================== */
-    .video-embed{
+    .video-embed {
         width: 100%;
     }
 
-    .close-btn{
+    .close-btn {
         right: 0;
     }
 
     /* ======================== Testimonial section ======================== */
-    .slick-slide-cite p{
+    .slick-slide-cite p {
         font-size: 18px;
         line-height: 30px;
         padding-left: 15px;
         padding-right: 15px;
     }
 
-    .slick-center img{
+    .slick-center img {
         width: 80px !important;
         transform: translate3d(84%, 0, 0) !important;
     }
 
-    .slick-slide-figure-info .infomation{
+    .slick-slide-figure-info .infomation {
         transform: translateX(0px);
     }
-    
-    .slick-slide-figure-info .name{
+
+    .slick-slide-figure-info .name {
         font-size: 18px;
     }
 
-    .slick-slide-figure-info .position{
+    .slick-slide-figure-info .position {
         font-size: 14px;
     }
 
-     /* pricing plan ===================== */
-     .pricing-plan .sub-heading{
+    /* pricing plan ===================== */
+    .pricing-plan .sub-heading {
         padding: 0 20px;
-     }
-     
-    .filter-item{
+    }
+
+    .filter-item {
         font-size: 15px;
     }
 
-      /* collection ======================= */
-      .collect-item{
+    /* collection ======================= */
+    .collect-item {
         width: 50%;
     }
-    #gallery-3{
+
+    #gallery-3 {
         display: none;
     }
 }
@@ -378,25 +439,25 @@
     }
 
     /* ======================== Testimonial section ======================== */
-    .slick-center img{
+    .slick-center img {
         width: 80px !important;
         transform: translate3d(65%, 0, 0) !important;
     }
 
     /* ============================ pricing plan =========================== */
-    .pricing-item .logo i{
+    .pricing-item .logo i {
         font-size: 200%;
     }
 
-    .pricing-item h4{
+    .pricing-item h4 {
         font-size: 20px;
     }
 
-    .pricing-item .description{
+    .pricing-item .description {
         font-size: 14px;
     }
 
-    .pricing-item .price{
+    .pricing-item .price {
         font-size: 125%;
     }
 }

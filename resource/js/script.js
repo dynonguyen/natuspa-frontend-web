@@ -562,10 +562,47 @@ $(document).ready(function () {
         // mouse leave -> add class fade out and remove class fade in
         active.on('mouseleave', function () {
             active.find('.plus-icon').hide(150);
-            active.addClass('disappear-' + currentDirec).one('webkitAnimationEnd', function(){
+            active.addClass('disappear-' + currentDirec).one('webkitAnimationEnd', function () {
                 active.removeClass('appear-' + currentDirec);
                 active.removeClass('disappear-' + currentDirec);
             });
         });
     });
+
+    // ========================= counter section ===============================
+    let maxNumber = [1569, 160, 136];
+    let syncRate_1 = Math.round(maxNumber[0] / maxNumber[1]);
+    let syncRate_2 = Math.round(maxNumber[2] / maxNumber[1]);
+    var countSync = function () {
+        let count = [0, 0, 0];
+        let intervalID = setInterval(function () {
+            let flag = true;
+            for(let i = 0; i < 3; ++i){
+                if(count[i] < maxNumber[i]){
+                    flag = false;
+                    if(!i){
+                        count[i] += syncRate_1;
+                    }else{
+                        ++count[i];
+                    }
+                }
+            }
+            if(flag){
+                clearInterval(intervalID);
+            }
+            // fixed: over max number
+            for(let i = 0; i < 3; ++i){
+                if(count[i] > maxNumber[i]){
+                    count[i] = maxNumber[i];
+                }
+            }
+            // add html
+            $('.number #number-1').text(count[0]);
+            $('.number #number-2').text(count[1]);
+            $('.number #number-3').text(count[2]);
+
+        }, 35);
+    }
+    countSync();
+    $('.counter-item').on('click', countSync);
 });
