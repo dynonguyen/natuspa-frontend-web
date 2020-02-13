@@ -154,6 +154,11 @@
     .pricing-item{
         width: 100%;
     }
+
+    /* spa packages =================== */
+    .package-box.center{
+        transform: translateY(300px);
+    }
 }
 
 @media only screen and (max-width: 840px) {
@@ -259,6 +264,19 @@
     }
     #gallery-4{
         display: none;
+    }
+
+    /* spa packages ===================== */
+    .spa-packages .heading{
+        margin-bottom: 20px;
+    }
+
+    .package-box.center{
+        transform: translateY(0px) scale(.95);
+    }
+
+    .package-box{
+
     }
 }
 
