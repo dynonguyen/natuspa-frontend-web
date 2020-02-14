@@ -10,6 +10,14 @@
     }
 }
 
+@media only screen and (max-width: 1550px){
+    /* ================ latest blog post ================== */
+    .post-slider{
+        max-width: 100%;
+        float: left;
+    }
+}
+
 @media only screen and (max-width: 1440px) {
 
     /* ======================== Header ========================*/
@@ -107,7 +115,6 @@
     .slide-text p {
         font-size: 16px;
     }
-
 }
 
 @media only screen and (max-width: 1070px) {
@@ -341,6 +348,12 @@
     /* team section ==================== */
     .team-item{
         transform: translateX(20px);
+    }
+
+    /* latest blog post ============== */
+    .post-box{
+        margin-left: 5px;
+        margin-right: 5px;
     }
 }
 

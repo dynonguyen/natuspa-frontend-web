@@ -72,12 +72,12 @@ $(document).ready(function () {
 
     // ======================= mobile navigation icon =======================
     let windows = $(window);
-    if (windows.width() < 1200) {
+    if (windows.width() < 1190) {
         $('.main-nav').attr('id', 'main-nav-mobile');
     }
     windows.resize(function () {
         let width = windows.width();
-        if (width < 1200) {
+        if (width < 1190) {
             $('.main-nav').attr('id', 'main-nav-mobile');
         } else {
             $('.main-nav').attr('id', '');
@@ -96,7 +96,7 @@ $(document).ready(function () {
         addDropdownIcon();
     }
     windows.resize(function () {
-        if (windows.width() <= 1200) {
+        if (windows.width() < 1190) {
             addDropdownIcon();
         } else {
             $('.icon-dropdown').css('display', 'none');
@@ -573,7 +573,7 @@ $(document).ready(function () {
     let maxNumber = [1569, 160, 136];
     let syncRate_1 = Math.round(maxNumber[0] / maxNumber[1]);
     let syncRate_2 = Math.round(maxNumber[2] / maxNumber[1]);
-    var countSync = function () {
+    var countSync = function (speed = 150) {
         let count = [0, 0, 0];
         let intervalID = setInterval(function () {
             let flag = true;
@@ -601,14 +601,16 @@ $(document).ready(function () {
             $('.number #number-2').text(count[1]);
             $('.number #number-3').text(count[2]);
 
-        }, 35);
+        }, speed);
     }
     countSync();
-    $('.counter-item').on('click', countSync);
+    $('.counter-item').on('click', function () {
+        countSync(35);
+    });
 
     // ====================== slick slider team ===============================
     // clone 1 item for slick when show all 3 slide
-    $('.team-item').clone().addClass('clone').appendTo(('.team-slider'));
+    $('.team-item').clone().addClass('clone').appendTo('.team-slider');
     $('.team-slider').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
@@ -628,6 +630,45 @@ $(document).ready(function () {
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1
+                }
+            }
+        ]
+    });
+
+    // ===================== slick slider latest blog post ==========================
+    // clone items
+    $('.post-box').clone().addClass('cloned').appendTo('.post-slider');
+
+    $('.post-slider').slick({
+        slidesToShow: 4,
+        slidesToScroll: 2,
+        arrows: false,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        pauseOnHover: true,
+        dots: true,
+        responsive: [
+            {
+                breakpoint: 1201,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    dots: false
+                }
+            }, {
+                breakpoint: 821,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    dots: false
+                }
+            }, {
+                breakpoint: 393,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    dots: false
                 }
             }
         ]
