@@ -1624,8 +1624,6 @@ footer{
     background-color: #241d26;
     text-align: center;
     overflow: hidden;
-    position: absolute;
-    bottom: 0;
 }
 
 footer .footer-content{
@@ -1665,4 +1663,86 @@ footer .footer-bottom{
     line-height: 75px;
     font-size: 20px;
     color: #aaa;
+}
+
+/* ===================== modal dialog box =========================== */
+.modal-dialog-box{
+    position: fixed;
+    background-color: #fff;
+    width: 800px;
+    height: 410px;
+    z-index: 99999999999999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal-dialog-box .inner{
+    position: relative;
+}
+
+.dialog-img{
+    width: 35%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.modal-dialog-box img{
+    max-width: 100%;
+}
+
+.modal-dialog-box .close-icon{
+    position: absolute;
+    right: 0;
+    left: auto;
+}
+
+.modal-dialog-box .content{
+    font-family: Playfair Display;
+    max-width: 55%;
+    position: absolute;
+    text-align: left;
+    transform: translate(70%, 30%);
+}
+
+.modal-dialog-box .pre-heading{
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #f96882;
+}
+
+.modal-dialog-box .heading{
+    font-size: 2.25rem;
+    color: #241d26;
+}
+
+.modal-dialog-box .sub-heading{
+    font-family: "Poppins", sans-serif;
+    margin-top: 20px;
+    font-size: .85rem;
+    line-height: 25px;
+    text-align: left;
+}
+
+.modal-dialog-box form{
+    width: 100%;
+    margin-top: 30px;
+}
+
+.modal-dialog-box input{
+    width: 65%;
+    height: 50px;
+    padding: 14px 20px;
+}
+
+.modal-dialog-box input:focus{
+    outline-color: #333;
+}
+
+.modal-dialog-box .book-now-btn{
+    width: 35%;
+    float: right;
+    background-color: #241d26 !important;
+    padding: 12px 22px !important;
 }

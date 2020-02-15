@@ -677,7 +677,30 @@ $(document).ready(function () {
     });
 
     // ============================== maps section =================================
-    $('.maps .submit-btn').on('click', function(){
-        validateForm('.maps'); 
+    $('.maps .submit-btn').on('click', function () {
+        validateForm('.maps');
+    });
+
+    // ============================= modal dialog box ==============================
+    // open
+    let freeTime = 0;
+    var setFreeTime = function () {
+        windows.on('mousemove', () => { freeTime = 0; });
+        windows.on('keypress', () => { freeTime = 0; });
+        ++freeTime;
+        // if it's 10 seconds then open
+        if (freeTime >= 10 && windows.width() > 855) {
+            $('#overlay').css('display', 'block');
+            $('.modal-dialog-box').show(350);
+            clearInterval(idFreeTimeInterval);
+            freeTime = 0;
+        }
+    }
+    let idFreeTimeInterval = setInterval(setFreeTime, 1000);
+    // close
+    $('.modal-dialog-box .close-icon').on('click', function () {
+        $('#overlay').css('display', 'none');
+        $('.modal-dialog-box').hide(350);
+        idFreeTimeInterval = setInterval(setFreeTime, 1000);
     });
 });
