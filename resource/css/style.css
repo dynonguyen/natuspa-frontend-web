@@ -589,7 +589,7 @@ nav.nav-sticky {
 
 .slide-item img {
     object-fit: cover;
-    width: 100%;
+    width: 100vw;
     height: 840px;
 }
 
