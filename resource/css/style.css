@@ -527,8 +527,8 @@ nav.nav-sticky {
     font-family: "Playfair Display", sans-serif;
     font-size: 18px;
     font-weight: 400;
-    color: #888;
-    letter-spacing: .5px;
+    color: #404040;
+    letter-spacing: .7px;
 }
 
 .contact-popup-info div {
@@ -1548,6 +1548,7 @@ input::placeholder {
 .slick-dots {
     position: relative !important;
     margin-top: 20px !important;
+    transform: translateX(-165px);
 }
 
 .slick-dots li {
@@ -1560,4 +1561,55 @@ input::placeholder {
 
 .slick-dots li.slick-active {
     background-color: #f96882 !important;
+}
+
+/* =========================== maps section ============================== */
+.maps-contact .inner{
+    padding-left: 10%;
+    max-width: 92%;
+}
+
+.maps-contact .section-title{
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.maps-contact .section-title::after{
+    margin-left: 0;
+}
+
+.maps-contact .contact-popup-info{
+    margin-bottom: 70px;
+}
+
+.maps-contact .form-input input,
+.maps-contact .your-service .current-option,
+.maps-contact .option-menu
+{
+    box-shadow: none;
+    border: 1px solid #ddd;
+}
+
+.maps-contact .form-input input:focus{
+    outline-color: #333;
+}
+
+.maps-contact textarea{
+    width: 95%;
+    height: 150px;
+    border: 1px solid #ddd;
+    margin: 0 auto;
+    padding: 14px 20px;
+    outline-color: #333;
+    margin-bottom: 30px;
+}
+
+.maps-contact textarea:focus{
+    transform: scale(1.05);
+    transition: all ease .35s;
+}
+
+.maps-contact .submit-btn input{
+    width: 35% !important;
+    font-weight: 500;
 }

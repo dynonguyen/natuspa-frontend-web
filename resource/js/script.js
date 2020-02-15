@@ -408,8 +408,6 @@ $(document).ready(function () {
     });
 
     // Form Validation
-    let input = $('.form-input input');
-
     var isEmpty = function (item) {
         if (!item)
             return true;
@@ -440,33 +438,37 @@ $(document).ready(function () {
         selector.removeClass('apply-shake');
     }
 
-    var validateForm = function () {
+    var validateForm = function (selectorName) {
+        let selector = $(selectorName + ' .form-input input');
         // check empty
-        input.each(function () {
+        selector.each(function () {
             if (isEmpty($(this).val()))
                 onError($(this));
             else
                 onNoError($(this));
         });
         // check email
-        if (isEmail($('#email').val()))
-            onNoError($('#email'));
+        let email = $(selectorName + ' #email');
+        if (isEmail(email.val()))
+            onNoError(email);
         else
-            onError($('#email'));
+            onError(email);
         // check phone number
-        if (isPhoneNumber($('#phone-number').val()))
-            onNoError($('#phone-number'));
+        let phone = $(selectorName + ' #phone-number');
+        if (isPhoneNumber(phone.val()))
+            onNoError(phone);
         else
-            onError($('#phone-number'));
+            onError(phone);
         // check type of services
-        if (checkTypeOfServices($('.current-option')))
-            onNoError($('.current-option'));
+        let typeOfService = $(selectorName + ' .current-option');
+        if (checkTypeOfServices(typeOfService))
+            onNoError(typeOfService);
         else
-            onError($('.current-option'));
+            onError(typeOfService);
     }
 
-    $('.submit-btn').click(function () {
-        validateForm();
+    $('.appointment-section .submit-btn').click(function () {
+        validateForm('.appointment-section');
     });
 
     // ========================= Filter - Pricing Plan ==========================
@@ -672,5 +674,10 @@ $(document).ready(function () {
                 }
             }
         ]
+    });
+
+    // ============================== maps section =================================
+    $('.maps .submit-btn').on('click', function(){
+        validateForm('.maps'); 
     });
 });

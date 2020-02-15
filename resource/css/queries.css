@@ -8,11 +8,18 @@
     .menu-item {
         padding: 0 25px;
     }
+
+    /* slick slider */
+    .slick-dots {
+        transform: translateX(0px);
+    }
+
 }
 
-@media only screen and (max-width: 1550px){
+@media only screen and (max-width: 1550px) {
+
     /* ================ latest blog post ================== */
-    .post-slider{
+    .post-slider {
         max-width: 100%;
         float: left;
     }
@@ -51,6 +58,11 @@
     .counter-section .counter {
         justify-content: space-around;
         transform: translateX(0%);
+    }
+
+    /* =========================== maps section ============================== */
+    .maps-contact .section-title {
+        font-size: 28px;
     }
 }
 
@@ -114,6 +126,22 @@
 
     .slide-text p {
         font-size: 16px;
+    }
+    /* ========================== maps section =========================== */
+    .maps-contact .contact-popup-info{
+        margin-bottom: 30px;
+    }
+
+    .maps-contact .section-title{
+        margin-bottom: 20px;
+    }
+
+    .maps-form{
+        margin-top: 40px;
+    }
+
+    .maps-contact .submit-btn input{
+        font-size: 14px;
     }
 }
 
@@ -190,6 +218,19 @@
         margin: 0 auto;
     }
 
+    /* ========================== maps ===============================  */
+    .maps-contact .inner{
+        padding-left: 2%;
+    }
+
+    .maps-contact .section-title{
+        font-size: 38px;
+    }
+
+    .maps-contact .submit-btn input{
+        font-size: 16px;
+        height: 70%;
+    }
 }
 
 @media only screen and (max-width: 840px) {
@@ -337,24 +378,36 @@
         justify-content: center;
     }
 
-    .counter-item:not(:last-child){
+    .counter-item:not(:last-child) {
         margin-bottom: 50px;
     }
 
-    .counter-item .title{
+    .counter-item .title {
         margin-bottom: 0;
     }
 
     /* team section ==================== */
-    .team-item{
+    .team-item {
         transform: translateX(20px);
     }
 
     /* latest blog post ============== */
-    .post-box{
+    .post-box {
         margin-left: 5px;
         margin-right: 5px;
     }
+}
+
+@media only screen and (max-width: 576px){
+   /* ============= maps section ================= */
+   .maps-contact textarea{
+       margin-top: 30px;
+       margin-bottom: 5px;
+   }
+
+   .maps-contact .submit-btn input{
+       padding: 0;
+   }
 }
 
 @media only screen and (max-width: 480px) {
