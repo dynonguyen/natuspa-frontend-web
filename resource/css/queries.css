@@ -128,19 +128,19 @@
         font-size: 16px;
     }
     /* ========================== maps section =========================== */
-    .maps-contact .contact-popup-info{
+    .maps-contact .contact-popup-info {
         margin-bottom: 30px;
     }
 
-    .maps-contact .section-title{
+    .maps-contact .section-title {
         margin-bottom: 20px;
     }
 
-    .maps-form{
+    .maps-form {
         margin-top: 40px;
     }
 
-    .maps-contact .submit-btn input{
+    .maps-contact .submit-btn input {
         font-size: 14px;
     }
 }
@@ -219,15 +219,15 @@
     }
 
     /* ========================== maps ===============================  */
-    .maps-contact .inner{
+    .maps-contact .inner {
         padding-left: 2%;
     }
 
-    .maps-contact .section-title{
+    .maps-contact .section-title {
         font-size: 38px;
     }
 
-    .maps-contact .submit-btn input{
+    .maps-contact .submit-btn input {
         font-size: 16px;
         height: 70%;
     }
@@ -398,16 +398,22 @@
     }
 }
 
-@media only screen and (max-width: 576px){
-   /* ============= maps section ================= */
-   .maps-contact textarea{
-       margin-top: 30px;
-       margin-bottom: 5px;
-   }
+@media only screen and (max-width: 576px) {
 
-   .maps-contact .submit-btn input{
-       padding: 0;
-   }
+    /* ============= maps section ================= */
+    .maps-contact textarea {
+        margin-top: 30px;
+        margin-bottom: 5px;
+    }
+
+    .maps-contact .submit-btn input {
+        padding: 0;
+    }
+
+    /* ================= footer =================== */
+    footer .footer-bottom{
+       font-size: 18px;
+    }
 }
 
 @media only screen and (max-width: 480px) {
@@ -488,6 +494,17 @@
     #gallery-3 {
         display: none;
     }
+
+    /* ================== maps ==================== */
+    .maps-contact .submit-btn input {
+        width: 50% !important;
+        font-size: 15px;
+    }
+
+    /* ================= footer =================== */
+    footer .footer-bottom{
+        font-size: 15px;
+     }
 }
 
 @media only screen and (max-width: 375px) {
