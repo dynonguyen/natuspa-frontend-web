@@ -1,3 +1,6 @@
+// ====================================== index ======================================= //
+// ================================================================================ //
+
 $(window).on('load', function () {
     // Loading ...
     $('body').removeClass('.preload');
@@ -235,11 +238,7 @@ $(document).ready(function () {
                 toNextSlide();
             else
                 toPrevSlide();
-        }, 6000);
-        windows.resize(function () {
-            if (windows.width() >= 768)
-                clearInterval(idInterval);
-        });
+        }, 8000);
     }
 
     $('#next-slide').on('click', function () {
@@ -696,11 +695,14 @@ $(document).ready(function () {
             freeTime = 0;
         }
     }
-    let idFreeTimeInterval = setInterval(setFreeTime, 1000);
+    let idFreeTimeInterval = setInterval(setFreeTime, 100000);
     // close
     $('.modal-dialog-box .close-icon').on('click', function () {
         $('#overlay').css('display', 'none');
         $('.modal-dialog-box').hide(350);
         idFreeTimeInterval = setInterval(setFreeTime, 1000);
     });
+
+    // ================================================================================ //
+    // ================================================================================ //
 });

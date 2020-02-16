@@ -1,0 +1,118 @@
+/* =================== reusable ================== */
+.section-title::after,
+.link-text::before{
+    background-color: #4da92e !important;
+}
+
+.link-text.text-linear-effect{
+    background-image: linear-gradient(90deg, #241d26, #241d26 50%, #4da92e 0);
+}
+/* =================== header ==================== */
+.bag-icon i span,
+.shop-cart-button .view-btn,
+.close-icon i,
+.social-media:hover {
+    background-color: #4da92e;
+}
+
+.shop-cart-button .view-btn:hover,
+.close-icon i:hover {
+    background-color: #4da92e;
+    opacity: .7;
+}
+
+.sub-menu li a:hover{
+    color: #4da92e !important;
+}
+
+header {
+    height: 100vh !important;
+}
+
+/* slider */
+
+.slide-item img{
+    height: 100vh !important;
+}
+
+.slider-control{
+    width: 50%;
+    height: 80px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    z-index: 1;
+    display: flex;
+}
+
+.slider-control i{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    color: #241d26;
+    background-color: #fff;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.control-btn{
+    text-align: center;
+    line-height: 80px;
+}
+
+.control-btn a{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.slider-index,
+.control-btn{
+    width: 25%;
+    background-color: rgba(255, 255, 255, .6);
+}
+
+.make-appointmnet{
+    flex-grow: 1;
+    background-color: #fff;
+    text-align: center;
+    line-height: 80px;
+}
+
+.make-appointmnet span{
+    font-size: 24px;
+    font-family: "Playfair Display";
+    color: #241d26;
+    font-weight: 600;
+    padding-right: 35px;
+}
+
+.slider-index{
+    font-size: 36px;
+    font-family: "Playfair Display";
+    color: #241d26;
+    font-weight: 700;
+    text-align: center;
+    line-height: 80px;
+}
+
+.slider-index span{
+    font-size: 80%;
+}
+
+/* ======================== about us ======================== */
+.about-section .main-content:first-child{
+    border-bottom: 2px solid #e9e9e9;
+}
+
+.about-section .images.has-bg-1{
+    background-image: url('/imgs/why-choose-us-2.jpg');
+    padding: 0 15px;
+    order: 2;
+}
+
+.about-section .images.has-bg-2{
+    background-image: url('/imgs/why-choose-us-3.jpg');
+    padding: 0 15px;
+}

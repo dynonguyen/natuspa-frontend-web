@@ -7,7 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Natuspa</title>
     <link rel="stylesheet" href="./resource/css/style.css">
+    <link rel="stylesheet" href="./resource/css/home-two.css">
     <link rel="stylesheet" href="./resource/css/queries.css">
+    <link rel="stylesheet" href="./resource/css/queries-home-two.css">
     <link rel="stylesheet" href="./resource/css/animation.css">
     <link rel="stylesheet" href="./vendor/css/bootstrap.min.css">
     <link rel="stylesheet" href="./vendor/fonts/fontawesome-5.0.13/css/all.css">
@@ -24,7 +26,7 @@
     <!-- Loading ......... -->
     <div class="loader" id="loader">
         <div class="loader-inner">
-            <img src="./imgs/loader.svg" alt="Loader" class="loader-img">
+            <img src="./imgs/loader-2.svg" alt="Loader" class="loader-img">
         </div>
     </div>
 
@@ -58,7 +60,7 @@
                                     <a href="index.html">Home One</a>
                                 </li>
                                 <li>
-                                    <a href="home-two.html">Home Two</a>
+                                    <a href="#home">Home Two</a>
                                 </li>
                             </ul>
                         </li>
@@ -188,7 +190,7 @@
             <div class="slide-wrap">
                 <div class="slide-inner">
                     <div class="slide-item active">
-                        <img src="./imgs/slide_1.jpg" alt="slide one">
+                        <img src="./imgs/slide_5.jpg" alt="slide one">
                         <div class="slide-text">
                             <h3>Welcome to Natuspa !</h3>
                             <h1>BE YOUR BEST</h1>
@@ -197,11 +199,10 @@
                                 and
                                 high stress lifestyle. leave feeling refreshed, beautiful, and more relaxed than ever.
                             </p>
-                            <button class="btn book-now-btn">book now</button>
                         </div>
                     </div>
                     <div class="slide-item">
-                        <img src="./imgs/slide_2.jpg" alt="slide two">
+                        <img src="./imgs/slide_4.jpg" alt="slide two">
                         <div class="slide-text" style="text-align: left;">
                             <h3>Welcome to Natuspa !</h3>
                             <h1>BE YOUR BEST</h1>
@@ -209,30 +210,73 @@
                                 long
                                 lasting benefits of the spavia experience.
                             </p>
-                            <button class="btn book-now-btn">book now</button>
                         </div>
                     </div>
                     <div class="slide-item">
-                        <img src="./imgs/slide_3.jpg" alt="slide three">
+                        <img src="./imgs/slide_6.jpg" alt="slide three">
                         <div class="slide-text" style="text-align: right;">
                             <h3>Welcome to Natuspa !</h3>
                             <h1>BE YOUR BEST</h1>
                             <p>set aside the chaos of your daily routines and make time for yourself let the spavia team
                                 recharge and refocus your body and mind.
                             </p>
-                            <button class="btn book-now-btn">book now</button>
                         </div>
                     </div>
                 </div>
-                <a href="#" class="slide-control" id="prev-slide"></a>
-                <a href="#" class="slide-control" id="next-slide"></a>
-                <ol class="slide-dot">
-                    <li class="active"></li>
-                    <li></li>
-                    <li></li>
-                </ol>
             </div>
+            <ul class="slider-control">
+                <li class="control-btn">
+                    <a href="#" id="prev"><i class="fal fa-chevron-left"></i></a>
+                    <a href="#" id="next"><i class="fal fa-chevron-right"></i></a>
+                </li>
+                <li class="make-appointmnet">
+                    <span>Make appointment</span>
+                    <i class="fal fa-chevron-right" style="transform: rotate(90deg); border: 2px solid #eee;"></i>
+                </li>
+                <li class="slider-index">03/ <span>3</span> </li>
+            </ul>
         </header>
+
+        <!-- about-section -->
+        <div class="about-section container" id="about">
+            <div class="spacer-clearfix" style="height: 80px;"></div>
+            <div class="inner">
+                <div class="row">
+                    <div class="main-content col-md-12">
+                        <div class="row">
+                            <div class="images has-bg-1 video-box col-sn-12 col-md-4">
+
+                            </div>
+                            <div class="about-main-text col-sn-12 col-md-8">
+                                <h2 class="section-title">History of Natuspa!</h2>
+                                <p class="text-box">
+                                    September 25, 2005, Natuspa opened its doors with a mission and vision of making a
+                                    positive difference in the world one guest at a time and delivering an exceptional
+                                    experience our guests couldn’t live without. for us, it’s been about a journey..
+                                </p>
+                                <a class="link-text text-linear-effect">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-content col-md-12">
+                        <div class="row">
+                            <div class="images has-bg-2 video-box col-sn-12 col-md-4">
+                            </div>
+                            <div class="about-main-text col-sn-12 col-md-8">
+                                <h2 class="section-title">Making a positive difference !</h2>
+                                <p class="text-box">
+                                    September 25, 2005, Natuspa opened its doors with a mission and vision of making a
+                                    positive difference in the world one guest at a time and delivering an exceptional
+                                    experience our guests couldn’t live without. for us, it’s been about a journey..
+                                </p>
+                                <a class="link-text text-linear-effect">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="spacer-clearfix" style="height: 80px;"></div>
+        </div>
 
         <!-- service section -->
         <div class="services-section container" id="services">
@@ -314,40 +358,6 @@
             </div>
         </div>
 
-        <!-- about-section -->
-        <div class="about-section container-fluid" id="about">
-            <div class="row">
-                <div class="video-box col-lg-6 col-md-12">
-                    <div class="play-btn">
-                        <i class="fas fa-play"></i>
-                    </div>
-                </div>
-                <div class="about-main-text col-lg-6 col-md-12">
-                    <h2 class="section-title">Our Story !</h2>
-                    <div class="sub-heading">
-                        <em>Natuspa opened its doors with a mission and vision of making a positive difference in the
-                            world.</em>
-                    </div>
-                    <p class="text-box">September 25, 2005, Natuspa opened its doors with a mission and vision of making
-                        a
-                        positive difference in the world one guest at a time and delivering an exceptional our guests
-                        couldn’t live without. for us, it’s been about a journey, not a race to build a legacy and
-                        reputation of being the best, delivering the best and creating a Natuspa culture that we are
-                        proud
-                        of each and every day. we are humbled and grateful for the opportunity to open our doors each
-                        day,
-                        create exceptional experiences and give back to our communities.
-                    </p>
-                    <a class="link-text text-linear-effect">Read More</a>
-                </div>
-            </div>
-            <iframe src="https://www.youtube.com/embed/zHCyHodIlCY" frameborder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
-                class="video-embed">
-            </iframe>
-            <span class="close-btn"><i class="fal fa-times"></i></span>
-            <div class="spacer-clearfix" style="height: 80px;"></div>
-        </div>
 
         <!-- testimonial section -->
         <div class="testimonial-section container" id="testimonial">
@@ -988,13 +998,14 @@
             <div class="content">
                 <h5 class="pre-heading">Get Our Most</h5>
                 <h3 class="heading">Exclusive Offers</h3>
-                <p class="sub-heading">Get up to 60% Extra Off Your First Deal Use code WELCOME at checkout for 20% Extra
+                <p class="sub-heading">Get up to 60% Extra Off Your First Deal Use code WELCOME at checkout for 20%
+                    Extra
                     Off Local & Getaways, or 10% Extra Off Goods.
                 </p>
                 <form action="#">
                     <input type="text" placeholder="Your E-mail">
                     <button class="btn book-now-btn">Subcriber</button>
-                </form>   
+                </form>
             </div>
         </div>
     </div>
@@ -1007,8 +1018,8 @@
     <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
     <script src="./vendor/js/datetimepicker-master/build/jquery.datetimepicker.full.js"></script>
     <script src="./vendor/js/Magnific-Popup-master/jquery.magnific-popup.min.js"></script>
-
-    <script src="./resource/js/script.js"></script>
+    <!-- <script src="./resource/js/script.js"></script> -->
+    <script src="./resource/js/home-two.js"></script>
 </body>
 
 </html>

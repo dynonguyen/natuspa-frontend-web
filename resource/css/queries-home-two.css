@@ -1,0 +1,36 @@
+@media only screen and (max-width: 1440px) {
+
+    /* =============== header ================ */
+    .slider-control {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+
+    /* =============== header ================ */
+    .slider-control {
+        width: 85%;
+    }
+    /* ============== about us =============== */
+    .about-main-text{
+        padding: 30px 3% 35px 30px !important;
+    }
+
+    .about-section .images{
+        height: 380px !important;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+    /* =============== header ================ */
+    .slider-control {
+        display: none;
+    }
+
+    /* ============== about us =============== */
+    .about-main-text{
+        padding: 30px 15px 35px !important;
+    }
+}
