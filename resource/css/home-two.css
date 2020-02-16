@@ -116,3 +116,77 @@ header {
     background-image: url('/imgs/why-choose-us-3.jpg');
     padding: 0 15px;
 }
+
+/* ======================= pricing plan ===================== */
+.pricing-plan-wrapper{
+    background-image: url('/imgs/pricing-section-bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.pricing-plan .section-title,
+.pricing-plan .sub-heading{
+    color: #fff;
+}
+
+.pricing-menu{
+    background-color: rgba(255, 255, 255, .8);
+    padding: 30px 50px !important;
+}
+
+.pricing-item .logo{
+    background-color: #fff;
+    z-index: 1;
+}
+
+.pricing-item:hover .logo::after{
+    background-color: #4da92e;
+}
+
+.pricing-item .logo i,
+.pricing-item .price{
+    color: #4da92e;
+}
+
+/* ================== services =============== */
+.services-icon-wrap{
+    color: #4da92e;
+}
+
+.services-section .text-linear-effect{
+    background-image: linear-gradient(90deg, #4da92e,#4da92e  50%, #241d26 0);
+}
+
+/* =============== collection ================ */
+.collect-item::before{
+    background-color: rgba(77, 169, 46, .8);
+}
+
+/* =============== process =================== */
+.process-item{
+    display: flex;
+    margin-bottom: 30px;
+    padding: 0 20px !important;
+}
+
+.process-item img{
+    height: 35%;
+}
+
+.process-item .text-wrap{
+    padding-left: 15px;
+    font-family: Playfair Display;
+}
+
+.process-item .heading{
+    font-size: 1.5rem;
+    letter-spacing: .7px;
+    margin-bottom: 14px;
+    color: #241d26;
+}
+
+.process-item .main-text{
+    line-height: 32px;
+    color: #7c787d;
+}

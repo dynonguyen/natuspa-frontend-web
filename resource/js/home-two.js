@@ -207,4 +207,68 @@ $(document).ready(function () {
         }, 1000);
         event.preventDefault();
     });
+
+     // ========================= Collection section =============================
+     $('.collection').magnificPopup({
+        type: 'image',
+        delegate: 'a',
+        fixedContentPos: false,
+        gallery: {
+            enabled: true
+        },
+        removalDelay: 300,
+        mainClass: 'mfp-fade',
+        zoom: {
+            enabled: true,
+            duration: 550,
+            easing: 'ease-in-out',
+            opener: function (openerElement) {
+                return openerElement.is('img') ? openerElement : openerElement.find('img');
+            }
+        }
+    });
+
+    // detect mouse direction use JavaScript
+    var direction = '';
+    var oldX = 0;
+    var oldY = 0;
+    var mousemovemethod = function (e) {
+        if (e.pageX > oldX && e.pageY == oldY) {
+            direction = 'left-right';
+        }
+        else if (e.pageX == oldX && e.pageY > oldY) {
+            direction = 'top-bottom';
+        }
+        else if (e.pageX == oldX && e.pageY < oldY) {
+            direction = 'bottom-top'
+        }
+        else if (e.pageX < oldX && e.pageY == oldY) {
+            direction = 'right-left';
+        }
+        oldX = e.pageX;
+        oldY = e.pageY;
+    }
+    document.addEventListener('mousemove', mousemovemethod);
+
+    $('.collect-item').on('mouseenter', function () {
+        let active = $(this);
+        let currentDirec;
+        // static variable : fix the direction is constantly changing
+        if (typeof currentDirec == 'undefined') {
+            currentDirec = direction;
+            document.removeEventListener('mousemove mousedown', mousemovemethod);
+        }
+        // add class fade in
+        active.addClass('appear-' + currentDirec);
+        active.find('.plus-icon').show(150);
+        document.addEventListener('mousemove', mousemovemethod);
+        // mouse leave -> add class fade out and remove class fade in
+        active.on('mouseleave', function () {
+            active.find('.plus-icon').hide(150);
+            active.addClass('disappear-' + currentDirec).one('webkitAnimationEnd', function () {
+                active.removeClass('appear-' + currentDirec);
+                active.removeClass('disappear-' + currentDirec);
+            });
+        });
+    });
 });
