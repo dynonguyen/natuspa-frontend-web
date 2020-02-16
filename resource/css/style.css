@@ -78,7 +78,7 @@ body {
     bottom: 150px;
     right: 30px;
     transform: rotate(-90deg);
-    z-index: 100000000000000;
+    z-index: 1;
     visibility: hidden;
     opacity: 0;
 }

@@ -233,3 +233,51 @@ header {
     height: auto;
 }
 
+/* ======================= videobox - counter ====================== */
+.videobox-counter-wrapper .counter-section{
+    padding: 90px 0px 95px 80px;
+}
+
+.videobox-counter-wrapper .counter-section .heading{
+    margin-left: 0;
+}
+
+.videobox-counter-wrapper .counter-section .counter{
+    display: block;
+    transform: translateX(0%);
+}
+
+.videobox-counter-wrapper .counter-item{
+    display: flex;
+    text-align: left;
+    margin-bottom: 70px !important;
+    margin-left: 10px;
+}
+
+.videobox-counter-wrapper .counter-section .heading{
+    text-align: left !important;
+}
+
+.videobox-counter-wrapper .counter-item .description{
+    margin-left: 30px;
+}
+
+.videobox-counter-wrapper .counter-item .title{
+    margin-top: 0;
+}
+
+.videobox-counter-wrapper .counter-section .sub-heading{
+    max-width: 400px !important;
+    margin-top: 20px !important;
+    font-size: 14px;
+    color: #7c787d;
+    text-align: left !important;
+}
+
+.videobox-counter-wrapper .video-box{
+    height: 100%;
+}
+
+.videobox-counter-wrapper .play-btn, .play-btn:hover{
+    color: #4da92e;
+}

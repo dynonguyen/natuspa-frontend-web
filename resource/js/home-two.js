@@ -3,7 +3,8 @@ $(window).on('load', function () {
     $('body').removeClass('.preload');
     $('#loader').delay(400).fadeOut('fast');
 });
-var windows = $(window);
+const windows = $(window);
+
 $(document).ready(function () {
     // ================= Way point - nav sticky and scroll-top ================
     $('.services-section').waypoint(function (dicrection) {
@@ -103,7 +104,6 @@ $(document).ready(function () {
         }
     });
 
-
     // ======================= slide header ==================================
     //add id for slide
     $('.slide-item').each(function (index) {
@@ -132,7 +132,6 @@ $(document).ready(function () {
         activeSlide.find('button').removeClass('animated fadeInRight');
     }
     addAnimatedForSlideText();
-
     // next and prev button
     var toNextSlide = function () {
         let activeSlide = $('.slide-item.active');
@@ -191,7 +190,6 @@ $(document).ready(function () {
             toNextSlide();
         }, 8000);
     }
-
     // control silde
     $('#next').on('click', function () {
         toNextSlide();
@@ -227,7 +225,6 @@ $(document).ready(function () {
             }
         }
     });
-
     // detect mouse direction use JavaScript
     var direction = '';
     var oldX = 0;
@@ -249,7 +246,6 @@ $(document).ready(function () {
         oldY = e.pageY;
     }
     document.addEventListener('mousemove', mousemovemethod);
-
     $('.collect-item').on('mouseenter', function () {
         let active = $(this);
         let currentDirec;
@@ -271,13 +267,68 @@ $(document).ready(function () {
             });
         });
     });
+
     // =============================== Slick of testimonial =====================================
+    // clone item
+    $('.slide-content').clone().addClass('cloned').appendTo('.slick-slide-cite');
     $('.slick-slide-cite').slick({
         arrows: false,
         infinite: true,
         autoplay: true,
         autoplaySpeed: 3000,
         pauseOnHover: true
+    });
+    // ============================= play-btn videobox - counter section ======================
+    // play video embed
+    let videoEmbed = $('.video-embed');
+    $('.play-btn').on('click', function () {
+        videoEmbed.show(350);
+        $('#overlay').css('display', 'block');
+        $('.close-btn').show(350);
+    });
+    $('.videobox-counter-wrapper .close-btn').on('click', function () {
+        videoEmbed.hide(350);
+        $('#overlay').css('display', 'none');
+        $('.close-btn').hide(350);
+    });
+
+    // ========================= counter section ===============================
+    let maxNumber = [1569, 160, 136];
+    let syncRate_1 = Math.round(maxNumber[0] / maxNumber[1]);
+    let syncRate_2 = Math.round(maxNumber[2] / maxNumber[1]);
+    var countSync = function (speed = 150) {
+        let count = [0, 0, 0];
+        let intervalID = setInterval(function () {
+            let flag = true;
+            for (let i = 0; i < 3; ++i) {
+                if (count[i] < maxNumber[i]) {
+                    flag = false;
+                    if (!i) {
+                        count[i] += syncRate_1;
+                    } else {
+                        ++count[i];
+                    }
+                }
+            }
+            if (flag) {
+                clearInterval(intervalID);
+            }
+            // fixed: over max number
+            for (let i = 0; i < 3; ++i) {
+                if (count[i] > maxNumber[i]) {
+                    count[i] = maxNumber[i];
+                }
+            }
+            // add html
+            $('.number #number-1').text(count[0]);
+            $('.number #number-2').text(count[1]);
+            $('.number #number-3').text(count[2]);
+
+        }, speed);
+    }
+    countSync();
+    $('.counter-item').on('click', function () {
+        countSync(35);
     });
 
 });

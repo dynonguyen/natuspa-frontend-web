@@ -6,6 +6,13 @@
     }
 }
 
+@media only screen and (max-width: 1200px){
+     /*========== videobox - counter ========*/
+     .videobox-counter-wrapper .counter-section{
+        padding-left: 40px;
+    }
+}
+
 @media only screen and (max-width: 992px) {
 
     /* =============== header ================ */
@@ -55,5 +62,10 @@
     .testimonial-section .figure-img img{
         max-width: 300px;
         margin: 0 auto;
+    }
+
+    /*========== videobox - counter ========*/
+    .videobox-counter-wrapper .counter-section{
+        padding-left: 10px;
     }
 }
