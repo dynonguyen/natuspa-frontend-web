@@ -145,7 +145,7 @@ header {
 }
 
 .pricing-item .logo i,
-.pricing-item .price{
+.price{
     color: #4da92e;
 }
 
@@ -190,3 +190,46 @@ header {
     line-height: 32px;
     color: #7c787d;
 }
+
+/* ================ testimonial =============== */
+.testimonial-section{
+    background-image: url('/imgs/pattern.png');
+}
+
+.testimonial-section .slide-content{
+    /* important -> slick -> img: display: block */
+    display: flex !important;
+}
+
+.slick-slide img{
+    /* important -> slick -> img: display: block */
+    display: inline-block !important;
+}
+
+.testimonial-section .text-wrap{
+    padding: 50px 0;
+    margin-left: 50px;
+    text-align: left;
+}
+
+.testimonial-section .infomation{
+    font-family: "Playfair Display", sans-serif;
+    color: #ccc;
+    font-size: 20px;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.testimonial-section blockquote p{
+    text-align: left;
+    color: #ddd;
+    font-size: 24px;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.testimonial-section .signature img{
+    max-width: 110px;
+    height: auto;
+}
+

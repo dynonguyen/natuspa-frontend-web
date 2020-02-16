@@ -20,6 +20,16 @@
     .about-section .images{
         height: 380px !important;
     }
+    /* ============ testimonial ============== */
+    .testimonial-section .slide-content{
+        flex-direction: column;
+    }
+
+    .testimonial-section .text-wrap,.testimonial-section blockquote p, .testimonial-section .figure-img{
+        text-align: center;
+        margin-left: 0;
+    }
+    
 }
 
 @media only screen and (max-width: 767px) {
@@ -40,5 +50,10 @@
     .pricing-menu{
         background-color: rgba(255, 255, 255, .8);
         padding: 30px 0px !important;
+    }
+    /* =========== testimonial ============== */
+    .testimonial-section .figure-img img{
+        max-width: 300px;
+        margin: 0 auto;
     }
 }

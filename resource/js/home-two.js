@@ -208,8 +208,8 @@ $(document).ready(function () {
         event.preventDefault();
     });
 
-     // ========================= Collection section =============================
-     $('.collection').magnificPopup({
+    // ========================= Collection section =============================
+    $('.collection').magnificPopup({
         type: 'image',
         delegate: 'a',
         fixedContentPos: false,
@@ -271,4 +271,13 @@ $(document).ready(function () {
             });
         });
     });
+    // =============================== Slick of testimonial =====================================
+    $('.slick-slide-cite').slick({
+        arrows: false,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        pauseOnHover: true
+    });
+
 });

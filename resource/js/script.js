@@ -695,7 +695,7 @@ $(document).ready(function () {
             freeTime = 0;
         }
     }
-    let idFreeTimeInterval = setInterval(setFreeTime, 100000);
+    let idFreeTimeInterval = setInterval(setFreeTime, 1000);
     // close
     $('.modal-dialog-box .close-icon').on('click', function () {
         $('#overlay').css('display', 'none');
