@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Natuspa</title>
+    <link rel="stylesheet" href="./resource/css/style.css">
+    <link rel="stylesheet" href="./resource/css/queries.css">
+    <link rel="stylesheet" href="./resource/css/animation.css">
+    <link rel="stylesheet" href="./vendor/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./vendor/fonts/fontawesome-5.0.13/css/all.css">
+    <link rel="stylesheet" href="./vendor/fonts/natuspa-font/css/natuspa-icons.css">
+    <link rel="stylesheet" href="./vendor/js/slick/slick.css">
+    <link rel="stylesheet" href="./vendor/js/slick/slick-theme.css">
+    <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" /> -->
+    <link rel="stylesheet" href="./vendor/js/datetimepicker-master/jquery.datetimepicker.css">
+    <link rel="stylesheet" href="./vendor/js/Magnific-Popup-master/magnific-popup.css">
+</head>
+
+<body class="preload">
+
+    <!-- Loading ......... -->
+    <div class="loader" id="loader">
+        <div class="loader-inner">
+            <img src="./imgs/loader.svg" alt="Loader" class="loader-img">
+        </div>
+    </div>
+
+    <!-- overlay for focus -->
+    <div id="overlay" style="display: none;"></div>
+
+    <!-- scroll top -->
+    <a class="scroll-top link-text" href="#home">Top</a>
+
+    <!-- page wrapper -->
+    <div class="page-wrapper">
+        <!-- Header -->
+        <header id="home" class="other-pages">
+            <!-- Navigation -->
+            <nav class="navbar navbar-expand-xl navbar-dark">
+                <!-- logo site -->
+                <a class="navbar-brand main-logo" href="index.html" rel="home" title="Natuspa">
+                    <img src="./imgs/logo_white.png" alt="Natuspa Logo" width="193" height="76">
+                </a>
+                <!--  main nav -->
+                <button class="navbar-toggler mobile-nav-icon" type="button" data-toggle="collapse"
+                    data-target="#main-nav-mobile">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse main-nav">
+                    <ul class="navbar-nav menu" id="mainNav">
+                        <li class="nav-item menu-item menu-item-current menu-item-has-child">
+                            <a class="nav-link">Home</a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="index.html">Home One</a>
+                                </li>
+                                <li>
+                                    <a href="home-two.html">Home Two</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item menu-item">
+                            <a class="nav-link" href="#services">Services</a>
+                        </li>
+                        <li class="nav-item menu-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                        <li class="nav-item menu-item menu-item-has-child">
+                            <a class="nav-link" href="#">News</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Blog Grid</a></li>
+                                <li><a href="#">Blog Details</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item menu-item">
+                            <a class="nav-link" href="#">Pricing</a>
+                        </li>
+                        <li class="nav-item menu-item">
+                            <a class="nav-link" href="#about">About Us</a>
+                        </li>
+                        <li class="nav-item menu-item menu-item-has-child">
+                            <a class="nav-link" href="#">Pages</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Error Page</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- nav icon -->
+                <div class="main-nav-icon">
+                    <!-- search -->
+                    <a class="search-button">
+                        <span class="search-icon nav-icon"><i class="fal fa-search"></i></span>
+                    </a>
+                    <div class="search-form">
+                        <span class="close-search"><i class="fal fa-times-circle"></i></span>
+                        <form class="search-input" action="#">
+                            <input type="text" name="search" id="searchForm" placeholder="Type and hit enter..."
+                                autocomplete="off">
+                        </form>
+                    </div>
+                    <!-- shopping bag -->
+                    <a class="bag-button">
+                        <span class="bag-icon nav-icon">
+                            <i class="fal fa-shopping-bag"><span class="badge badge-danger">2</span></i>
+                        </span>
+                        <div class="shop-cart">
+                            <div class="shop-cart-item">
+                                <img src="./imgs/products/product-1.jpg" alt="product-1">
+                                <p class="product-info">
+                                    The Ordinary Coverage Foundation<br>
+                                    <span class="quantity">1 ×
+                                        <span class="amount">$<span class="price">215.00</span></span>
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="shop-cart-item">
+                                <img src="./imgs/products/product-2.jpg" alt="product-2">
+                                <p class="product-info">
+                                    SkinStore Holiday Collection<br>
+                                    <span class="quantity">5 ×
+                                        <span class="amount">$<span class="price">75.99</span></span>
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="shop-cart-total">
+                                <strong>Subtotal: </strong><span>$594.95</span>
+                            </div>
+                            <div class="shop-cart-button">
+                                <a href="#" class="btn view-btn">view cart</a>
+                                <a href="#" class="btn checkout-btn">checkout</a>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- bars icon -->
+                    <a class="slide-icon">
+                        <span class="bars-icon nav-icon"><i class="fal fa-bars"></i></span>
+                    </a>
+                </div>
+            </nav>
+            <!-- title pages -->
+            <h1 class="page-title">services</h1>
+            <!-- menu popup -->
+            <div class="menu-popup">
+                <span class="close-icon"><i class="fal fa-times"></i></span>
+                <div class="content-wrap">
+                    <h1 class="title">Natuspa</h1>
+                    <p class="text">
+                        For us, it’s been about a journey, not a race to build a legacy and reputation of being the
+                        best,
+                        delivering the best and creating a Natuspa culture that we are proud of each and every day.
+                    </p>
+                    <span class="menu-popup-img"><img src="./imgs/summer-sale.jpg" alt="Sale"></span>
+                    <div class="contact-popup-info">
+                        <h2 class="title">Contact Us</h2>
+                        <div class="address">
+                            <span>145 Franklin St, Redpoint Eval</span>
+                        </div>
+                        <div class="email">
+                            <span>Natuspa@email-themes.com</span>
+                        </div>
+                        <div class="phone">
+                            <span>+84 933 1235 113</span>
+                        </div>
+                        <div class="social-media-icons">
+                            <div class="social-media">
+                                <a class="social-popup-icon" target="_blank" href="#"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                            </div>
+                            <div class="social-media">
+                                <a class="social-popup-icon" target="_blank" href="https://fb.com/Tuannguyentn2504"><i
+                                        class="fab fa-facebook-f"></i></a>
+                            </div>
+                            <div class="social-media">
+                                <a class="social-popup-icon" target="_blank" href="#"><i
+                                        class="fab fa-twitter"></i></i></a>
+                            </div>
+                            <div class="social-media">
+                                <a class="social-popup-icon" target="_blank" href="#"><i
+                                        class="fab fa-google-plus-g"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- service section -->
+        <div class="services-section container" id="services">
+            <div class="row">
+                <div class="spacer-clearfix" style="height: 80px;"></div>
+                <div class="services-info col-md-12">
+                    <h2 class="section-title">our best services</h2>
+                    <p class="services-main-text">Natuspa is a full service salon with experts in body services, nail
+                        care,
+                        massage, waxing, skin care, and other treatments.
+                    </p>
+                </div>
+                <div class="service col-lg-4 col-md-6 col-sm-12">
+                    <div class="services-icon-wrap">
+                        <i class="natuspa-icon-facial-treatment"></i>
+                    </div>
+                    <div class="heading text-linear-effect">Derm Young Facial</div>
+                    <div class="description">This facial addresses most of the common skin concerns for both men and
+                        women
+                        including dehydration, wrinkles, and loss of firmness.
+                    </div>
+                    <div class="spacer-clearfix" style="height: 50px;"></div>
+                </div>
+                <div class="service col-lg-4 col-md-6 col-sm-12">
+                    <div class="services-icon-wrap">
+                        <i class="natuspa-icon-depilation"></i>
+                    </div>
+                    <div class="heading text-linear-effect">Natural Waxing</div>
+                    <div class="description">This drastically reduces the occurrence of hair breakage, painful in-grown
+                        hairs, and also allows us to remove smaller, harder to grab hairs.
+                    </div>
+                    <div class="spacer-clearfix" style="height: 50px;"></div>
+                </div>
+                <div class="service col-lg-4 col-md-6 col-sm-12">
+                    <div class="services-icon-wrap">
+                        <i class="natuspa-icon-massage-1"></i>
+                    </div>
+                    <div class="heading text-linear-effect">Signature Massage</div>
+                    <div class="description">invite Natuspa to travel to your office or place of business and help your
+                        team
+                        relax! great for team recognition, a reward for meeting goals.
+                    </div>
+                    <div class="spacer-clearfix" style="height: 50px;"></div>
+                </div>
+                <div class="service col-lg-4 col-md-6 col-sm-12">
+                    <div class="services-icon-wrap">
+                        <i class="natuspa-icon-herbal"></i>
+                    </div>
+                    <div class="heading text-linear-effect">Body Treatments</div>
+                    <div class="description">This treatment begins with a gentle lavender sugar scrub, followed by the
+                        Vichy
+                        shower to exfoliate and remove bacteria from our pores.
+                    </div>
+                    <div class="spacer-clearfix" style="height: 0px;"></div>
+                </div>
+                <div class="service col-lg-4 col-md-6 col-sm-12">
+                    <div class="services-icon-wrap">
+                        <i class="natuspa-icon-polish"></i>
+                    </div>
+                    <div class="heading text-linear-effect">Natural Nails Care</div>
+                    <div class="description">Natuspa has highly trained professionals when it comes manicures and
+                        pedicures.
+                        If you have any questions, please don't hesitate to contact us.
+                    </div>
+                    <div class="spacer-clearfix" style="height: 0px;"></div>
+                </div>
+                <div class="service col-lg-4 col-md-6 col-sm-12">
+                    <div class="services-icon-wrap">
+                        <i class="natuspa-icon-stone"></i>
+                    </div>
+                    <div class="heading text-linear-effect">Hot Stone Massage</div>
+                    <div class="description">Hot stone massage is a therapeutic massage treatment during which warmed
+                        stones
+                        are placed on certain areas of the body.
+                    </div>
+                    <div class="spacer-clearfix" style="height: 0px;"></div>
+                </div>
+                <div class="spacer-clearfix" style="height: 80px;"></div>
+            </div>
+        </div>
+
+        <!-- appointment & form section -->
+        <div class="appointment-section container-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="spacer-clearfix" style="height: 90px;"></div>
+                    <div class="heading col-12">
+                        <div class="pre-heading">Make an appointment</div>
+                        <div class="main-heading">premium<br>Collection</div>
+                        <div class="sub-heading">Up to 50% Off Sale</div>
+                    </div>
+                    <div class="spacer-clearfix" style="height: 60px;"></div>
+                    <div class="appointment-form col-12">
+                        <form action="/action_page.php">
+                            <div class="row">
+                                <div class="form-input col-lg-4 col-md-6 col-sm-12 your-name">
+                                    <input type="text" name="name" id="name" placeholder="Full Name">
+                                    <div class="error">( <span>*</span> )</div>
+                                </div>
+                                <div class="form-input col-lg-4 col-md-6 col-sm-12 your-email">
+                                    <input type="text" name="email" id="email" placeholder="E-mail">
+                                    <div class="error">( <span>*</span> )</div>
+                                </div>
+                                <div class="form-input col-lg-4 col-md-6 col-sm-12 your-phone-number">
+                                    <input type="text" name="phone-number" id="phone-number" placeholder="Phone Number">
+                                    <div class="error">( <span>*</span> )</div>
+                                </div>
+                                <div class="form-input col-lg-4 col-md-6 col-sm-12 preferred-date">
+                                    <input type="text" name="preferred-date" id="datepicker"
+                                        placeholder="Preferred Date" autocomplete="off">
+                                    <div class="error">( <span>*</span> )</div>
+                                </div>
+                                <div class="form-input col-lg-4 col-md-6 col-sm-12 your-service">
+                                    <div class="current-option" data-value="0">Type Of Services</div>
+                                    <div class="error">( <span>*</span> )</div>
+                                    <span class="dropdown-icon"><i class="fal fa-chevron-down down"></i></span>
+                                    <ul class="option-menu">
+                                        <li class="option" data-value="0">Type Of Services</li>
+                                        <li class="option" data-value="1">Natural Waxing</li>
+                                        <li class="option" data-value="1">Signature Massage</li>
+                                        <li class="option" data-value="1">Natural Nails Care</li>
+                                        <li class="option" data-value="1">Body Treatments</li>
+                                        <li class="option" data-value="1">Derm Young Facial</li>
+                                    </ul>
+                                </div>
+                                <div class="form-input col-lg-4 col-md-6 col-sm-12 submit-btn">
+                                    <input value="APPOINTMENT NOW" id="appointment-submit" name="submit"
+                                        class="btn book-now-btn" disabled="disabled" style="opacity: 1;">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="spacer-clearfix" style="height: 80px;"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- team section -->
+        <div class="team container">
+            <div class="spacer-clearfix" style="height: 70px;"></div>
+            <div class="heading">
+                <h2 class="section-title">our happy team</h2>
+                <div class="sub-heading">
+                    <p>Natuspa is a full service salon with experts in body services, nail care, massage, waxing, skin
+                        care,
+                        and other treatments.
+                    </p>
+                </div>
+            </div>
+            <div class="spacer-clearfix" style="height: 65px;"></div>
+            <div class="team-slider">
+                <div class="team-item">
+                    <img src="./imgs/team/person-1-370x450.jpg" alt="Person-1">
+                    <div class="infomation">
+                        <h4 class="name">Emille Jenifer</h4>
+                        <div class="position">Massagist</div>
+                    </div>
+                    <ul class="social-media-icons">
+                        <li class="social-media">
+                            <a class="social-popup-icon" target="_blank">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </li>
+                        <li class="social-media">
+                            <a href="https://fb.com/tuannguyentn2504" class="social-popup-icon" target="_blank">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li class="social-media">
+                            <a class="social-popup-icon" target="_blank">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="team-item">
+                    <img src="./imgs/team/person-2-370x450.jpg" alt="Person-2">
+                    <div class="infomation">
+                        <h4 class="name">Marsha Hoffman</h4>
+                        <div class="position">makeup expert</div>
+                    </div>
+                    <ul class="social-media-icons">
+                        <li class="social-media">
+                            <a class="social-popup-icon" target="_blank">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </li>
+                        <li class="social-media">
+                            <a href="https://fb.com/tuannguyentn2504" class="social-popup-icon" target="_blank">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li class="social-media">
+                            <a class="social-popup-icon" target="_blank">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="team-item">
+                    <img src="./imgs/team/person-3-370x450.jpg" alt="Person-3">
+                    <div class="infomation">
+                        <h4 class="name">Emille Jenifer</h4>
+                        <div class="position">Massagist</div>
+                    </div>
+                    <ul class="social-media-icons">
+                        <li class="social-media">
+                            <a class="social-popup-icon" target="_blank">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </li>
+                        <li class="social-media">
+                            <a href="https://fb.com/tuannguyentn2504" class="social-popup-icon" target="_blank">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li class="social-media">
+                            <a class="social-popup-icon" target="_blank">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="spacer-clearfix" style="height: 90px;"></div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer id="footer">
+        <div class="footer-content">
+            <a href="index.html"><img src="./imgs/footer-logo-white.png" alt="footer-logo"></a>
+            <div class="sub-heading">Design by @CBR-Themes</div>
+            <div class="slogan">Pro inimicus sapientem an, ad cibo velit.</div>
+            <ul class="footer-social">
+                <li class="social-media" style="background-color: #4b64a6;">
+                    <a class="social-popup-icon" target="_blank" href="https://fb.com/Tuannguyentn2504">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </li>
+                <li class="social-media" style="background-color: #0cace4;">
+                    <a class="social-popup-icon" target="_blank" href="#">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li class="social-media" style="background-color: #f12756;">
+                    <a class="social-popup-icon" target="_blank" href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-bottom">Copyright © 2019. Natuspa. All Rights Reserved.</div>
+    </footer>
+
+    <!-- modal dialog box popup -->
+    <div class="modal-dialog-box" style="display: none;">
+        <div class="inner">
+            <div class="dialog-img"><img src="./imgs/popup-img.jpg" alt="Dialog Img" style="height: 410px;"></div>
+            <span class="close-icon"><i class="fal fa-times"></i></span>
+            <div class="content">
+                <h5 class="pre-heading">Get Our Most</h5>
+                <h3 class="heading">Exclusive Offers</h3>
+                <p class="sub-heading">Get up to 60% Extra Off Your First Deal Use code WELCOME at checkout for 20% Extra
+                    Off Local & Getaways, or 10% Extra Off Goods.
+                </p>
+                <form action="#">
+                    <input type="text" placeholder="Your E-mail">
+                    <button class="btn book-now-btn">Subcriber</button>
+                </form>   
+            </div>
+        </div>
+    </div>
+
+    <script src="./vendor/js/jquery-v3.4.1.min.js"></script>
+    <script src="./vendor/js/bootstrap.min.js"></script>
+    <script src="./vendor/js/jquery.waypoints.min.js"></script>
+    <!-- <script src="https://kit.fontawesome.com/7534282567.js" crossorigin="anonymous"></script> -->
+    <script src="./vendor/js/slick/slick.min.js"></script>
+    <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
+    <script src="./vendor/js/datetimepicker-master/build/jquery.datetimepicker.full.js"></script>
+    <script src="./vendor/js/Magnific-Popup-master/jquery.magnific-popup.min.js"></script>
+
+    <script src="./resource/js/script.js"></script>
+</body>
+
+</html>

@@ -1746,3 +1746,25 @@ footer .footer-bottom{
     background-color: #241d26 !important;
     padding: 12px 22px !important;
 }
+
+/* ============================================================== */
+/* ===================== Other Pages title ====================== */
+/* ============================================================== */
+.other-pages{
+   background-image: url('/imgs/featured-bg.jpg');
+   height: 50vh;
+}
+
+.page-title{
+    font-family: Playfair Display;
+    text-transform: capitalize;
+    font-size: 65px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    letter-spacing: .7px;
+}
