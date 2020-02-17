@@ -1,12 +1,13 @@
 /* =================== reusable ================== */
 .section-title::after,
-.link-text::before{
+.link-text::before {
     background-color: #4da92e !important;
 }
 
-.link-text.text-linear-effect{
+.link-text.text-linear-effect {
     background-image: linear-gradient(90deg, #241d26, #241d26 50%, #4da92e 0);
 }
+
 /* =================== header ==================== */
 .bag-icon i span,
 .shop-cart-button .view-btn,
@@ -21,7 +22,7 @@
     opacity: .7;
 }
 
-.sub-menu li a:hover{
+.sub-menu li a:hover {
     color: #4da92e !important;
 }
 
@@ -31,11 +32,11 @@ header {
 
 /* slider */
 
-.slide-item img{
+.slide-item img {
     height: 100vh !important;
 }
 
-.slider-control{
+.slider-control {
     width: 50%;
     height: 80px;
     position: absolute;
@@ -47,7 +48,7 @@ header {
     display: flex;
 }
 
-.slider-control i{
+.slider-control i {
     width: 40px;
     height: 40px;
     line-height: 40px;
@@ -57,30 +58,30 @@ header {
     text-align: center;
 }
 
-.control-btn{
+.control-btn {
     text-align: center;
     line-height: 80px;
 }
 
-.control-btn a{
+.control-btn a {
     padding-left: 10px;
     padding-right: 10px;
 }
 
 .slider-index,
-.control-btn{
+.control-btn {
     width: 25%;
     background-color: rgba(255, 255, 255, .6);
 }
 
-.make-appointmnet{
+.make-appointmnet {
     flex-grow: 1;
     background-color: #fff;
     text-align: center;
     line-height: 80px;
 }
 
-.make-appointmnet span{
+.make-appointmnet span {
     font-size: 24px;
     font-family: "Playfair Display";
     color: #241d26;
@@ -88,7 +89,7 @@ header {
     padding-right: 35px;
 }
 
-.slider-index{
+.slider-index {
     font-size: 36px;
     font-family: "Playfair Display";
     color: #241d26;
@@ -97,28 +98,28 @@ header {
     line-height: 80px;
 }
 
-.slider-index span{
+.slider-index span {
     font-size: 80%;
 }
 
 /* ======================== about us ======================== */
-.about-section .main-content:first-child{
+.about-section .main-content:first-child {
     border-bottom: 2px solid #e9e9e9;
 }
 
-.about-section .images.has-bg-1{
+.about-section .images.has-bg-1 {
     background-image: url('/imgs/why-choose-us-2.jpg');
     padding: 0 15px;
     order: 2;
 }
 
-.about-section .images.has-bg-2{
+.about-section .images.has-bg-2 {
     background-image: url('/imgs/why-choose-us-3.jpg');
     padding: 0 15px;
 }
 
 /* ======================= pricing plan ===================== */
-.pricing-plan-wrapper{
+.pricing-plan-wrapper {
     background-image: url('/imgs/pricing-section-bg.jpg');
     background-position: center;
     background-repeat: no-repeat;
@@ -126,93 +127,93 @@ header {
 }
 
 .pricing-plan .section-title,
-.pricing-plan .sub-heading{
+.pricing-plan .sub-heading {
     color: #fff;
 }
 
-.pricing-menu{
+.pricing-menu {
     background-color: rgba(255, 255, 255, .8);
     padding: 30px 50px !important;
 }
 
-.pricing-item .logo{
+.pricing-item .logo {
     background-color: #fff;
     z-index: 1;
 }
 
-.pricing-item:hover .logo::after{
+.pricing-item:hover .logo::after {
     background-color: #4da92e;
 }
 
 .pricing-item .logo i,
-.price{
+.price {
     color: #4da92e;
 }
 
 /* ================== services =============== */
-.services-icon-wrap{
+.services-icon-wrap {
     color: #4da92e;
 }
 
-.services-section .text-linear-effect{
-    background-image: linear-gradient(90deg, #4da92e,#4da92e  50%, #241d26 0);
+.services-section .text-linear-effect {
+    background-image: linear-gradient(90deg, #4da92e, #4da92e 50%, #241d26 0);
 }
 
 /* =============== collection ================ */
-.collect-item::before{
+.collect-item::before {
     background-color: rgba(77, 169, 46, .8);
 }
 
 /* =============== process =================== */
-.process-item{
+.process-item {
     display: flex;
     margin-bottom: 30px;
     padding: 0 20px !important;
 }
 
-.process-item img{
+.process-item img {
     height: 35%;
 }
 
-.process-item .text-wrap{
+.process-item .text-wrap {
     padding-left: 15px;
     font-family: Playfair Display;
 }
 
-.process-item .heading{
+.process-item .heading {
     font-size: 1.5rem;
     letter-spacing: .7px;
     margin-bottom: 14px;
     color: #241d26;
 }
 
-.process-item .main-text{
+.process-item .main-text {
     line-height: 32px;
     color: #7c787d;
 }
 
 /* ================ testimonial =============== */
-.testimonial-section{
+.testimonial-section {
     background-image: url('/imgs/pattern.png');
 }
 
-.testimonial-section .slide-content{
+.testimonial-section .slide-content {
     /* important -> slick -> img: display: block */
     display: flex !important;
 }
 
-.slick-slide img{
+.slick-slide img {
     /* important -> slick -> img: display: block */
     display: inline-block !important;
 }
 
-.testimonial-section .text-wrap{
+.testimonial-section .text-wrap {
     padding: 50px 0;
     margin-left: 50px;
     text-align: left;
 }
 
-.testimonial-section .infomation{
+.testimonial-section .infomation {
     font-family: "Playfair Display", sans-serif;
     color: #ccc;
     font-size: 20px;
@@ -220,7 +221,7 @@ header {
     margin-bottom: 20px;
 }
 
-.testimonial-section blockquote p{
+.testimonial-section blockquote p {
     text-align: left;
     color: #ddd;
     font-size: 24px;
@@ -228,45 +229,45 @@ header {
     margin-bottom: 30px;
 }
 
-.testimonial-section .signature img{
+.testimonial-section .signature img {
     max-width: 110px;
     height: auto;
 }
 
 /* ======================= videobox - counter ====================== */
-.videobox-counter-wrapper .counter-section{
+.videobox-counter-wrapper .counter-section {
     padding: 90px 0px 95px 80px;
 }
 
-.videobox-counter-wrapper .counter-section .heading{
+.videobox-counter-wrapper .counter-section .heading {
     margin-left: 0;
 }
 
-.videobox-counter-wrapper .counter-section .counter{
+.videobox-counter-wrapper .counter-section .counter {
     display: block;
     transform: translateX(0%);
 }
 
-.videobox-counter-wrapper .counter-item{
+.videobox-counter-wrapper .counter-item {
     display: flex;
     text-align: left;
     margin-bottom: 70px !important;
     margin-left: 10px;
 }
 
-.videobox-counter-wrapper .counter-section .heading{
+.videobox-counter-wrapper .counter-section .heading {
     text-align: left !important;
 }
 
-.videobox-counter-wrapper .counter-item .description{
+.videobox-counter-wrapper .counter-item .description {
     margin-left: 30px;
 }
 
-.videobox-counter-wrapper .counter-item .title{
+.videobox-counter-wrapper .counter-item .title {
     margin-top: 0;
 }
 
-.videobox-counter-wrapper .counter-section .sub-heading{
+.videobox-counter-wrapper .counter-section .sub-heading {
     max-width: 400px !important;
     margin-top: 20px !important;
     font-size: 14px;
@@ -274,10 +275,67 @@ header {
     text-align: left !important;
 }
 
-.videobox-counter-wrapper .video-box{
+.videobox-counter-wrapper .video-box {
     height: 100%;
 }
 
-.videobox-counter-wrapper .play-btn, .play-btn:hover{
+.videobox-counter-wrapper .play-btn,
+.play-btn:hover {
+    color: #4da92e;
+}
+
+/* ==================== latest blog post =================== */
+.latest-blog {
+    background-color: #fff;
+}
+
+.post-slider {
+    width: 100% !important;
+}
+
+.post-box {
+    margin-left: 0;
+    max-width: 100%;
+}
+
+.post-box .inner {
+    box-shadow: 0px 7px 15px 0px rgba(7, 7, 7, 0.06);
+}
+
+.post-box img {
+    width: 100%;
+}
+
+.post-box .post-wrapper {
+    padding: 44px 65px 50px 46px;
+}
+
+.post-category{
+    font-family: 'Lora';
+}
+
+.post-title {
+    background-image: linear-gradient(90deg, #4da92e, #4da92e 50%, #241d26 0);
+}
+
+/* ================ maps section ======================= */
+.maps-contact textarea{
+    width: 97%;
+}
+
+.contact-wrapper{
+    padding-left: 50px !important;
+}
+
+.book-now-btn{
+    background-color: #4da92e !important;
+}
+
+.option-menu li:hover{
+    background-color: #4da92e;
+}
+
+/* ============= modal dialog - scroll top =============== */
+.modal-dialog-box .pre-heading, .scroll-top.link-text{
     color: #4da92e;
 }

@@ -1610,7 +1610,7 @@ input::placeholder {
 }
 
 .maps-contact .submit-btn input{
-    width: 35% !important;
+    width: 35% ;
     font-weight: 500;
 }
 /* ================== footer =================== */

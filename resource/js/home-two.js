@@ -7,7 +7,7 @@ const windows = $(window);
 
 $(document).ready(function () {
     // ================= Way point - nav sticky and scroll-top ================
-    $('.services-section').waypoint(function (dicrection) {
+    $('.about-section').waypoint(function (dicrection) {
         if (dicrection === 'down') {
             $('nav').addClass('nav-sticky');
             $('.scroll-top').css({
@@ -205,7 +205,6 @@ $(document).ready(function () {
         }, 1000);
         event.preventDefault();
     });
-
     // ========================= Collection section =============================
     $('.collection').magnificPopup({
         type: 'image',
@@ -330,5 +329,150 @@ $(document).ready(function () {
     $('.counter-item').on('click', function () {
         countSync(35);
     });
+    // ======================== latest blog slick ==============================
+    // clone
+    $('.post-box').clone().addClass('cloned').appendTo('.post-slider');
+    // slick slider
+    $('.post-slider').slick({
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 1500,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    autoplay: true,
+                    autoplaySpeed: 1500
+                }
+            }
+        ]
+    });
 
+    // ========================= Form Input - Service ==========================
+    // dropdown
+    let dropdownIcon = $('.dropdown-icon i');
+
+    var flipUp = function () {
+        $('.option-menu').animate({
+            'opacity': '0',
+            'height': '0'
+        }, 500);
+        dropdownIcon.removeClass('rotate').addClass('down');
+    }
+    var flipDown = function () {
+        $('.option-menu').animate({
+            'opacity': '1',
+            'height': '156px'
+        }, 500);
+        dropdownIcon.removeClass('down').addClass('rotate');
+    }
+
+    dropdownIcon.on('click', function () {
+        if (dropdownIcon.hasClass('down') === true) {
+            flipDown();
+        } else {
+            flipUp();
+        }
+    });
+    // select services
+    let option = $('.option-menu .option');
+    option.on('click', function () {
+        $('.current-option').text($(this).text());
+        $('.current-option').attr('data-value', $(this).attr('data-value'));
+        if ($('.current-option').attr('data-value') != '0')
+            $('.current-option').css('color', '#000');
+        else
+            $('.current-option').css('color', '#888');
+        flipUp();
+    });
+    // Form Validation
+    var isEmpty = function (item) {
+        if (!item)
+            return true;
+        return false;
+    }
+    var isEmail = function (email) {
+        let regex = /^([a-zA-Z0-9_])+\@(([a-zA-Z]{3,})+\.com)$/i;
+        return regex.test(email);
+    }
+    var isPhoneNumber = function (phoneNumber) {
+        let regex = /^\d{10,11}$/
+        return regex.test(phoneNumber);
+    }
+    var checkTypeOfServices = function (tOS) {
+        if (tOS.attr('data-value') == '0')
+            return false;
+        return true;
+    }
+
+    var onError = function (selector) {
+        selector.next().css('display', 'block');
+        selector.addClass('apply-shake').one('webkitAnimationEnd', function () {
+            selector.removeClass('apply-shake')
+        });
+    }
+    var onNoError = function (selector) {
+        selector.next().css('display', 'none');
+        selector.removeClass('apply-shake');
+    }
+
+    var validateForm = function (selectorName) {
+        let selector = $(selectorName + ' .form-input input');
+        // check empty
+        selector.each(function () {
+            if (isEmpty($(this).val()))
+                onError($(this));
+            else
+                onNoError($(this));
+        });
+        // check email
+        let email = $(selectorName + ' #email');
+        if (isEmail(email.val()))
+            onNoError(email);
+        else
+            onError(email);
+        // check phone number
+        let phone = $(selectorName + ' #phone-number');
+        if (isPhoneNumber(phone.val()))
+            onNoError(phone);
+        else
+            onError(phone);
+        // check type of services
+        let typeOfService = $(selectorName + ' .current-option');
+        if (checkTypeOfServices(typeOfService))
+            onNoError(typeOfService);
+        else
+            onError(typeOfService);
+    }
+
+    $('.maps .submit-btn').click(function () {
+        validateForm('.maps');
+    });
+    // ============================= modal dialog box ==============================
+    // open
+    let freeTime = 0;
+    var setFreeTime = function () {
+        windows.on('mousemove', () => { freeTime = 0; });
+        windows.on('keypress', () => { freeTime = 0; });
+        ++freeTime;
+        // if it's 10 seconds then open
+        if (freeTime >= 10 && windows.width() > 855) {
+            $('#overlay').css('display', 'block');
+            $('.modal-dialog-box').show(350);
+            clearInterval(idFreeTimeInterval);
+            freeTime = 0;
+        }
+    }
+    let idFreeTimeInterval = setInterval(setFreeTime, 1000);
+    // close
+    $('.modal-dialog-box .close-icon').on('click', function () {
+        $('#overlay').css('display', 'none');
+        $('.modal-dialog-box').hide(350);
+        idFreeTimeInterval = setInterval(setFreeTime, 1000);
+    });
 });

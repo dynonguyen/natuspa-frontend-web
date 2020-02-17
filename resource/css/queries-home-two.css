@@ -36,7 +36,11 @@
         text-align: center;
         margin-left: 0;
     }
-    
+    /* =============== maps =================== */
+    .contact-wrapper{
+        margin: 50px 0;
+        padding-left: 15px !important;
+    }
 }
 
 @media only screen and (max-width: 767px) {
@@ -63,9 +67,12 @@
         max-width: 300px;
         margin: 0 auto;
     }
-
     /*========== videobox - counter ========*/
     .videobox-counter-wrapper .counter-section{
         padding-left: 10px;
+    }
+     /* =============== maps =================== */
+    .maps-contact textarea{
+        width: 95%;
     }
 }

@@ -408,6 +408,7 @@
 
     .maps-contact .submit-btn input {
         padding: 0;
+        width: 100%;
     }
 
     /* ================= footer =================== */
@@ -493,13 +494,7 @@
 
     #gallery-3 {
         display: none;
-    }
-
-    /* ================== maps ==================== */
-    .maps-contact .submit-btn input {
-        width: 50% !important;
-        font-size: 15px;
-    }
+    }   
 
     /* ================= footer =================== */
     footer .footer-bottom{
