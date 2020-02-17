@@ -415,6 +415,19 @@
     footer .footer-bottom{
        font-size: 18px;
     }
+
+    /* ================ page 404 ================== */
+    .page-404-inner .form-search form{
+        width: 85%;
+    }
+    
+    .page-404-inner .warning{
+        font-size: 2rem;
+    }
+
+    .page-404-inner .form-search input{
+        font-size: 16px;
+    }
 }
 
 @media only screen and (max-width: 480px) {

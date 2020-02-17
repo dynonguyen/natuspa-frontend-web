@@ -1768,3 +1768,75 @@ footer .footer-bottom{
     transform: translate(-50%, -50%);
     letter-spacing: .7px;
 }
+
+/* ========================= 404 page =========================== */
+.page-404-inner{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    text-align: center;
+}
+
+.page-404-img{
+    max-width: 100%;
+}
+
+.page-404-inner img{
+    max-width: 90vw;
+}
+
+.page-404-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.page-404-inner .warning{
+    font-family: 'Playfair Display';
+    color: #241d26;
+    letter-spacing: .7px;
+    font-weight: 500;
+    font-size: 2.5rem;
+    margin: 48px auto 20px;
+}
+
+.page-404-inner .suggestions{
+    font-size: 20px;
+    color: #555;
+    font-weight: 400;
+    margin-bottom: 65px;
+}
+
+.page-404-inner .suggestions a{
+    color: #f96882;
+}
+
+.page-404-inner .form-search form{
+    width: 70%;
+    display: inline-block;
+}
+
+.page-404-inner .form-search input{
+    width: 65%;
+    height: 60px;
+    padding: 14px 20px;
+    border: 1px solid #ddd;
+    font-size: 18px;
+}
+
+.page-404-inner .form-search input:focus{
+    outline-color: #333;
+}
+
+.page-404-inner .form-search .book-now-btn{
+    width: 35%;
+    height: 60px;
+    float: right;
+    background-color: #f96882 !important;
+    padding: 12px 22px !important;
+}
+
+.page-404-inner .form-search .book-now-btn:hover{
+    background-color: #241d26 !important;
+}
