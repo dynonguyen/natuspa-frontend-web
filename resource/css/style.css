@@ -1752,7 +1752,7 @@ footer .footer-bottom{
 /* ============================================================== */
 .other-pages{
    background-image: url('/imgs/featured-bg.jpg');
-   height: 50vh;
+   height: 50vh !important;
 }
 
 .page-title{

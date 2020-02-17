@@ -339,7 +339,6 @@ $(document).ready(function () {
         asNavFor: '.slick-slide-cite, .slick-slide-figure-img',
         focusOnSelect: true
     });
-
     // ============================ Date Picker =================================
     $('#datepicker').datetimepicker();
 
@@ -366,7 +365,6 @@ $(document).ready(function () {
     windows.resize(function () {
         resizeDatepickder();
     });
-
     // ========================= Form Input - Service ==========================
     // dropdown
     let dropdownIcon = $('.dropdown-icon i');
@@ -405,7 +403,7 @@ $(document).ready(function () {
             $('.current-option').css('color', '#888');
         flipUp();
     });
-
+   
     // Form Validation
     var isEmpty = function (item) {
         if (!item)
@@ -469,7 +467,6 @@ $(document).ready(function () {
     $('.appointment-section .submit-btn').click(function () {
         validateForm('.appointment-section');
     });
-
     // ========================= Filter - Pricing Plan ==========================
     // change filter menu activity
     let activeFilter = $('.filter-item.active');
@@ -705,4 +702,5 @@ $(document).ready(function () {
 
     // ================================================================================ //
     // ================================================================================ //
+    
 });
