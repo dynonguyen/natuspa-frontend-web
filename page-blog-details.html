@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Natuspa</title>
+    <link rel="stylesheet" href="./resource/css/style.css">
+    <link rel="stylesheet" href="./resource/css/home-two.css">
+    <link rel="stylesheet" href="./resource/css/page-blog-details.css">
+    <link rel="stylesheet" href="./resource/css/queries.css">
+    <link rel="stylesheet" href="./resource/css/animation.css">
+    <link rel="stylesheet" href="./vendor/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./vendor/fonts/fontawesome-5.0.13/css/all.css">
+    <link rel="stylesheet" href="./vendor/fonts/natuspa-font/css/natuspa-icons.css">
+    <link rel="stylesheet" href="./vendor/js/slick/slick.css">
+    <link rel="stylesheet" href="./vendor/js/slick/slick-theme.css">
+    <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" /> -->
+    <link rel="stylesheet" href="./vendor/js/datetimepicker-master/jquery.datetimepicker.css">
+    <link rel="stylesheet" href="./vendor/js/Magnific-Popup-master/magnific-popup.css">
+</head>
+
+<body class="preload">
+
+    <!-- Loading ......... -->
+    <div class="loader" id="loader">
+        <div class="loader-inner">
+            <img src="./imgs/loader-2.svg" alt="Loader" class="loader-img">
+        </div>
+    </div>
+
+    <!-- overlay for focus -->
+    <div id="overlay" style="display: none;"></div>
+
+    <!-- scroll top -->
+    <a class="scroll-top link-text" href="#home">Top</a>
+
+    <!-- page wrapper -->
+    <div class="page-wrapper">
+        <!-- Header -->
+        <header id="home" class="other-pages">
+            <!-- Navigation -->
+            <nav class="navbar navbar-expand-xl navbar-dark">
+                <!-- logo site -->
+                <a class="navbar-brand main-logo" href="index.html" rel="home" title="Natuspa">
+                    <img src="./imgs/logo_white.png" alt="Natuspa Logo" width="193" height="76">
+                </a>
+                <!--  main nav -->
+                <button class="navbar-toggler mobile-nav-icon" type="button" data-toggle="collapse"
+                    data-target="#main-nav-mobile">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse main-nav">
+                    <ul class="navbar-nav menu" id="mainNav">
+                        <li class="nav-item menu-item menu-item-has-child">
+                            <a class="nav-link">Home</a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="index.html">Home One</a>
+                                </li>
+                                <li>
+                                    <a href="home-two.html">Home Two</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item menu-item">
+                            <a class="nav-link" href="services.html">Services</a>
+                        </li>
+                        <li class="nav-item menu-item">
+                            <a class="nav-link" href="contact-us.html">Contact</a>
+                        </li>
+                        <li class="nav-item menu-item menu-item-current menu-item-has-child">
+                            <a class="nav-link" href="#">News</a>
+                            <ul class="sub-menu">
+                                <li><a href="page-blog.html">Blog Grid</a></li>
+                                <li><a href="#home">Blog Details</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item menu-item">
+                            <a class="nav-link" href="page-pricing.html">Pricing</a>
+                        </li>
+                        <li class="nav-item menu-item">
+                            <a class="nav-link" href="about-us.html">About Us</a>
+                        </li>
+                        <li class="nav-item menu-item menu-item-has-child">
+                            <a class="nav-link" href="#">Pages</a>
+                            <ul class="sub-menu">
+                                <li><a href="page-404.html">Error Page</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- nav icon -->
+                <div class="main-nav-icon">
+                    <!-- search -->
+                    <a class="search-button">
+                        <span class="search-icon nav-icon"><i class="fal fa-search"></i></span>
+                    </a>
+                    <div class="search-form">
+                        <span class="close-search"><i class="fal fa-times-circle"></i></span>
+                        <form class="search-input" action="#">
+                            <input type="text" name="search" id="searchForm" placeholder="Type and hit enter..."
+                                autocomplete="off">
+                        </form>
+                    </div>
+                    <!-- shopping bag -->
+                    <a class="bag-button">
+                        <span class="bag-icon nav-icon">
+                            <i class="fal fa-shopping-bag"><span class="badge badge-danger">2</span></i>
+                        </span>
+                        <div class="shop-cart">
+                            <div class="shop-cart-item">
+                                <img src="./imgs/products/product-1.jpg" alt="product-1">
+                                <p class="product-info">
+                                    The Ordinary Coverage Foundation<br>
+                                    <span class="quantity">1 ×
+                                        <span class="amount">$<span class="price">215.00</span></span>
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="shop-cart-item">
+                                <img src="./imgs/products/product-2.jpg" alt="product-2">
+                                <p class="product-info">
+                                    SkinStore Holiday Collection<br>
+                                    <span class="quantity">5 ×
+                                        <span class="amount">$<span class="price">75.99</span></span>
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="shop-cart-total">
+                                <strong>Subtotal: </strong><span>$594.95</span>
+                            </div>
+                            <div class="shop-cart-button">
+                                <a href="#" class="btn view-btn">view cart</a>
+                                <a href="#" class="btn checkout-btn">checkout</a>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- bars icon -->
+                    <a class="slide-icon">
+                        <span class="bars-icon nav-icon"><i class="fal fa-bars"></i></span>
+                    </a>
+                </div>
+            </nav>
+            <!-- title pages -->
+            <h1 class="page-title">our blog</h1>
+            <!-- menu popup -->
+            <div class="menu-popup">
+                <span class="close-icon"><i class="fal fa-times"></i></span>
+                <div class="content-wrap">
+                    <h1 class="title">Natuspa</h1>
+                    <p class="text">
+                        For us, it’s been about a journey, not a race to build a legacy and reputation of being the
+                        best,
+                        delivering the best and creating a Natuspa culture that we are proud of each and every day.
+                    </p>
+                    <span class="menu-popup-img"><img src="./imgs/summer-sale.jpg" alt="Sale"></span>
+                    <div class="contact-popup-info">
+                        <h2 class="title">Contact Us</h2>
+                        <div class="address">
+                            <span>145 Franklin St, Redpoint Eval</span>
+                        </div>
+                        <div class="email">
+                            <span>Natuspa@email-themes.com</span>
+                        </div>
+                        <div class="phone">
+                            <span>+84 933 1235 113</span>
+                        </div>
+                        <div class="social-media-icons">
+                            <div class="social-media">
+                                <a class="social-popup-icon" target="_blank" href="#"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                            </div>
+                            <div class="social-media">
+                                <a class="social-popup-icon" target="_blank" href="https://fb.com/Tuannguyentn2504"><i
+                                        class="fab fa-facebook-f"></i></a>
+                            </div>
+                            <div class="social-media">
+                                <a class="social-popup-icon" target="_blank" href="#"><i
+                                        class="fab fa-twitter"></i></i></a>
+                            </div>
+                            <div class="social-media">
+                                <a class="social-popup-icon" target="_blank" href="#"><i
+                                        class="fab fa-google-plus-g"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- main blog -->
+        <div class="blog-details container-fluid">
+            <div class="spacer-clearfix" style="height: 80px;"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="site-content">
+                            <h2 class="heading">
+                                2020 Spa And Wellness Trend <br> "The Return Of Gua Sha".
+                            </h2>
+                            <div class="date">DEC 27, 2019 - JAQUAN ROLFSON</div>
+                            <div class="blog-img"><img src="./imgs/news/news-details.jpg" alt="news-details"></div>
+                            <h6 class="sub-title">Gua Sha is now being incorporated into a variety of facials</h6>
+                            <div class="main-content">
+                                <p>It’s no surprise then that many skincare companies are looking for ways to introduce
+                                    gua sha to their facial and body protocols and even launching their own tools. “I
+                                    found out about gua sha therapy when we launched Odacité in Hong Kong three years
+                                    ago,” says Grandury. “I had the most amazing body gua sha massage and decided to
+                                    create a gua sha tool specifically designed for the face. For the stone, we started
+                                    with rose quartz, as it is the stone of unconditional love, and for me, skincare is
+                                    an act of self-love.” When Odacité’s Instagram community began asking for other
+                                    stones, the company responded by introducing blue sodalite, the crystal associated
+                                    with harmony, and green aventurine, which relates to opportunity and good luck.
+                                </p>
+                                <blockquote>"But like the visual effects of cupping, the temporary bruising sometimes
+                                    associated with gua sha isn’t proving to be a deterrent. Instead, many are taking to
+                                    Instagram to show off their results"
+                                </blockquote>
+                                <p>Kerstin Florian also introduced a line of gua sha tools, choosing to make them with
+                                    the Sibin Bian stone. “We’ve always been very particular about stones and their
+                                    qualities and vibrational frequencies,” says Trina Jefferson, director of global
+                                    education. “Having our own tools gives us the level of quality and consistency that
+                                    we demand.”
+                                </p>
+                                <p>“Right now, with the opioid epidemic at an all-time high, we are looking to ancient
+                                    remedies that help decrease pain without addictive substances,” says Trattner. “Gua
+                                    sha has excellent clinical efficacy for reducing pain with little to no side
+                                    effects, except a rash.”
+                                </p>
+                            </div>
+                            <div class="post-tags">
+                                <a href="#" class="tag">Treatment</a>
+                                <a href="#" class="tag">Gua Sha</a>
+                                <a href="#" class="tag">Waxing</a>
+                                <a href="#" class="tag">Skincare</a>
+                            </div>
+                            <div class="social-share">
+                                <span>Share: </span>
+                                <ul class="post-social">
+                                    <li class="social-media" style="background-color: #4b64a6;">
+                                        <a target="_blank" href="https://fb.com/Tuannguyentn2504">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                    </li>
+                                    <li class="social-media" style="background-color: #0cace4;">
+                                        <a target="_blank" href="#">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li class="social-media" style="background-color: #f12756;">
+                                        <a target="_blank" href="#">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="author">
+                                <div class="author-description">
+                                    <div class="avatar"><img src="./imgs/news/author.jpg" alt="Author"></div>
+                                    <div class="text-wrap">
+                                        <h3 class="name">Tessa Lighty</h3>
+                                        <p class="text">"I never knew before starting to use Instagram that the only
+                                            place you can use a live link is in your bio."
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="site-bar">
+                            <div class="search">
+                                <input type="text" placeholder="Search">
+                                <span class="search-btn"><i class="fal fa-search"></i></span>
+                            </div>
+                            <span class="recent-news">Recent News</span>
+                            <div class="blog-post">
+                                <div class="blog-item">
+                                    <div class="blog-img"><img src="/imgs/news/news-1-570x340.jpg" alt="New-1"></div>
+                                    <div class="text-wrap">
+                                        <h3 class="heading">HiFi Exchange Opens Holiday Wellness.</h3>
+                                        <span class="date">Feb 18, 2020</span>
+                                    </div>
+                                </div>
+                                <div class="blog-item">
+                                    <div class="blog-img"><img src="/imgs/news/news-2-570x340.jpg" alt="New-1"></div>
+                                    <div class="text-wrap">
+                                        <h3 class="heading">Interactionse With Events Property.</h3>
+                                        <span class="date">Feb 17, 2020</span>
+                                    </div>
+                                </div>
+                                <div class="blog-item">
+                                    <div class="blog-img"><img src="/imgs/news/recent-news-1.jpg" alt="New-1"></div>
+                                    <div class="text-wrap">
+                                        <h3 class="heading">HiFi Exchange Opens Holiday Wellness.</h3>
+                                        <span class="date">Jan 18, 2020</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-tags">
+                                <span>Tags</span>
+                                <a href="#" class="tags">Treatment</a>
+                                <a href="#" class="tags">Spa</a>
+                                <a href="#" class="tags">Manicure</a>
+                                <a href="#" class="tags">Mordern</a>
+                                <a href="#" class="tags">Care</a>
+                                <a href="#" class="tags">Glamour</a>
+                                <a href="#" class="tags">Physiotherapy</a>
+                                <a href="#" class="tags">Wellness Center</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid bg-gray">
+                <div class="spacer-clearfix" style="height: 80px;"></div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="comments container">
+                            <h4 class="title">Comments <span class="numbers"></span></h4>
+                            <div class="main-comments">
+                                <div class="comment-item">
+                                    <div class="author-img"><img src="./imgs/comment/1.png" alt="Author"></div>
+                                    <div class="text-wrap">
+                                        <div class="author-name">Natasha Bedingfield</div>
+                                        <div class="date">Mon Feb 18 2019 16:42:04 GMT+01</div>
+                                        <a href="#" class="comment-reply">Reply</a>
+                                        <p class="comment-text">Thanks for the great tips! Instagram is the most
+                                            problematic social media channel when it comes to trying to lead customers
+                                            down
+                                            the funnel and to your site.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="comment-item">
+                                    <div class="author-img"><img src="./imgs/comment/2.png" alt="Author"></div>
+                                    <div class="text-wrap">
+                                        <div class="author-name">Corinna Keefe</div>
+                                        <div class="date">Mon Feb 18 2019 17:49:14 GMT+01</div>
+                                        <a href="#" class="comment-reply">Reply</a>
+                                        <p class="comment-text">Thanks for sharing these useful tips. #Hashtag is very
+                                            useful to rank a post. It will help me a lot.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="comment-item">
+                                    <div class="author-img"><img src="./imgs/comment/3.png" alt="Author"></div>
+                                    <div class="text-wrap">
+                                        <div class="author-name">Jaquan Rolfson</div>
+                                        <div class="date">Mon Feb 18 2019 19:45:27 GMT+07</div>
+                                        <a href="#" class="comment-reply">Reply</a>
+                                        <p class="comment-text">Awesome article. I personally use a linktree in my bio
+                                            where i i keep my most important articles and posts.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <h4 class="title">Leave a comment</h4>
+                            <div class="comment-form">
+                                <form action="#" class="row">
+                                    <div class="name-wrap col-sm-12 col-md-6 pl-0">
+                                        <input type="text" placeholder="Full Name*" id="fullName">
+                                        <div class="error" style="display: none;">( <span>*</span> )</div>
+                                    </div>
+                                    <div class="email-wrap col-sm-12 col-md-6 pl-0">
+                                        <input type="text" placeholder="E-mail*" id="email">
+                                        <div class="error" style="display: none;">( <span>*</span> )</div>
+                                    </div>
+                                    <div class="message-wrap col-sm-12 pl-0">
+                                        <textarea name="message" id="comment" placeholder="Comment*"></textarea>
+                                        <div class="error" style="display: none;">( <span>*</span> )</div>
+                                    </div>
+                                    <div class="post-btn-wrap col-sm-12 pl-0">
+                                        <div class="btn book-now-btn post-btn col-sm-12">post comment</div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="spacer-clearfix" style="height: 80px;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer id="footer">
+        <div class="footer-content">
+            <a href="index.html"><img src="./imgs/footer-logo-white.png" alt="footer-logo"></a>
+            <div class="sub-heading">Design by @CBR-Themes</div>
+            <div class="slogan">Pro inimicus sapientem an, ad cibo velit.</div>
+            <ul class="footer-social">
+                <li class="social-media" style="background-color: #4b64a6;">
+                    <a class="social-popup-icon" target="_blank" href="https://fb.com/Tuannguyentn2504">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </li>
+                <li class="social-media" style="background-color: #0cace4;">
+                    <a class="social-popup-icon" target="_blank" href="#">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li class="social-media" style="background-color: #f12756;">
+                    <a class="social-popup-icon" target="_blank" href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-bottom">Copyright © 2019. Natuspa. All Rights Reserved.</div>
+    </footer>
+
+    <!-- modal dialog box popup -->
+    <div class="modal-dialog-box" style="display: none;">
+        <div class="inner">
+            <div class="dialog-img"><img src="./imgs/popup-img.jpg" alt="Dialog Img" style="height: 410px;"></div>
+            <span class="close-icon"><i class="fal fa-times"></i></span>
+            <div class="content">
+                <h5 class="pre-heading">Get Our Most</h5>
+                <h3 class="heading">Exclusive Offers</h3>
+                <p class="sub-heading">Get up to 60% Extra Off Your First Deal Use code WELCOME at checkout for 20%
+                    Extra
+                    Off Local & Getaways, or 10% Extra Off Goods.
+                </p>
+                <form action="#">
+                    <input type="text" placeholder="Your E-mail">
+                    <button class="btn book-now-btn">Subcriber</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="./vendor/js/jquery-v3.4.1.min.js"></script>
+    <script src="./vendor/js/bootstrap.min.js"></script>
+    <script src="./vendor/js/jquery.waypoints.min.js"></script>
+    <!-- <script src="https://kit.fontawesome.com/7534282567.js" crossorigin="anonymous"></script> -->
+    <script src="./vendor/js/slick/slick.min.js"></script>
+    <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
+    <script src="./vendor/js/datetimepicker-master/build/jquery.datetimepicker.full.js"></script>
+    <script src="./vendor/js/Magnific-Popup-master/jquery.magnific-popup.min.js"></script>
+    <script src="./vendor/js/moment.min.js"></script>
+    <script src="./resource/js/script.js"></script>
+    <script src="./resource/js/blog-post.js"></script>
+</body>
+
+</html>

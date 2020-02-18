@@ -127,6 +127,7 @@
     .slide-text p {
         font-size: 16px;
     }
+
     /* ========================== maps section =========================== */
     .maps-contact .contact-popup-info {
         margin-bottom: 30px;
@@ -230,6 +231,20 @@
     .maps-contact .submit-btn input {
         font-size: 16px;
         height: 70%;
+    }
+
+    /* ================================================================================= */
+    /* ================================= blog page details ============================= */
+    .blog-details .site-bar {
+        display: none;
+    }
+
+    .blog-details .site-content {
+        width: 100%;
+    }
+
+    .comment-form{
+        width: 90% !important;
     }
 }
 
@@ -412,21 +427,41 @@
     }
 
     /* ================= footer =================== */
-    footer .footer-bottom{
-       font-size: 18px;
+    footer .footer-bottom {
+        font-size: 18px;
     }
 
     /* ================ page 404 ================== */
-    .page-404-inner .form-search form{
+    .page-404-inner .form-search form {
         width: 85%;
     }
-    
-    .page-404-inner .warning{
+
+    .page-404-inner .warning {
         font-size: 2rem;
     }
 
-    .page-404-inner .form-search input{
+    .page-404-inner .form-search input {
         font-size: 16px;
+    }
+
+    /* ================================================================================= */
+    /* ================================= blog page details ============================= */
+    .site-content .post-tags a {
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+
+    /* ================== comment ======================= */
+    .comment-item .text-wrap{
+        width: 100% !important;
+    }
+
+    .comment-item .author-name{
+        font-size: 14px;
+    }
+
+    .comment-form .post-btn{
+        width: 55% !important;
     }
 }
 
@@ -507,12 +542,20 @@
 
     #gallery-3 {
         display: none;
-    }   
+    }
 
     /* ================= footer =================== */
-    footer .footer-bottom{
+    footer .footer-bottom {
         font-size: 15px;
-     }
+    }
+
+    /* ================================================================================= */
+    /* ================================= blog page details ============================= */
+    /* ================== comment ======================= */
+    .comment-item .comment-reply{
+        top: 32px !important;
+        right: 0px !important;
+    }
 }
 
 @media only screen and (max-width: 375px) {
